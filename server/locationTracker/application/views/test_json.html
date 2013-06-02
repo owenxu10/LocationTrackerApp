@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="jquery-1.10.1.min.js"></script>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+</head>
+<body>
+	<script>
+	$(document).ready(function(){
+		$('#button').click(function(){
+			$.ajax({
+				type:"GET",
+				url:"http://192.168.97.166/locationTracker/index.php",
+				dataType:"json",
+				success:function(data){
+					var music="<ul>";
+					//i表示在data中的索引位置，n表示包含的信息的对象
+					$.each(data,function(i,n){
+						//获取对象中属性为optionsValue的值				
+						music+="<li>"+n["DeviceID"]+"</li>";
+						music+="<li>"+n["CurrentTime"]+"</li>";
+						music+="<li>"+n["Latitude"]+"</li>";
+						music+="<li>"+n["Longitude"]+"</li>";
+						music+="</br>";
+					});
+					music+="</ul>";
+					$('#result').append(music);
+				}
+			});
+			return false;
+		});
+	});
+	</script>
+	<div>点击按钮获取JSON数据</div>
+	<input type="button" id="button" value="确定" />
+	<div id="result"></div>
+</body>
+</html>
