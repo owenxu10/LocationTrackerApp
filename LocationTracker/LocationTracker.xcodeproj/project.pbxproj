@@ -24,9 +24,9 @@
 		C35C86A217449C350041909D /* Backgrounds1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C35C86A117449C350041909D /* Backgrounds1.jpg */; };
 		C35C86A417449C380041909D /* Friends.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C35C86A317449C380041909D /* Friends.jpg */; };
 		C35C86AA1744A16C0041909D /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = C35C86A91744A16C0041909D /* map.png */; };
+		C3ACDA32175BEF40009B2A37 /* BusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ACDA31175BEF40009B2A37 /* BusViewController.m */; };
 		C3BD64601757283F00B0CC40 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3BD645F1757283F00B0CC40 /* GoogleMaps.framework */; };
 		C3BD64621757286500B0CC40 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C3BD64611757286500B0CC40 /* GoogleMaps.bundle */; };
-		C3DFB93E175724A200F4380F /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DFB93D175724A200F4380F /* MapViewController.m */; };
 		C3DFB9401757260D00F4380F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DFB93F1757260D00F4380F /* AVFoundation.framework */; };
 		C3DFB9421757261400F4380F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DFB9411757261400F4380F /* CoreData.framework */; };
 		C3DFB9441757261A00F4380F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DFB9431757261A00F4380F /* CoreLocation.framework */; };
@@ -66,10 +66,10 @@
 		C35C86A117449C350041909D /* Backgrounds1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Backgrounds1.jpg; sourceTree = "<group>"; };
 		C35C86A317449C380041909D /* Friends.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Friends.jpg; sourceTree = "<group>"; };
 		C35C86A91744A16C0041909D /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
+		C3ACDA30175BEF40009B2A37 /* BusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusViewController.h; sourceTree = "<group>"; };
+		C3ACDA31175BEF40009B2A37 /* BusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusViewController.m; sourceTree = "<group>"; };
 		C3BD645F1757283F00B0CC40 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		C3BD64611757286500B0CC40 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
-		C3DFB93C175724A200F4380F /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
-		C3DFB93D175724A200F4380F /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		C3DFB93F1757260D00F4380F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C3DFB9411757261400F4380F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		C3DFB9431757261A00F4380F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -158,10 +158,10 @@
 		C35C867E17448DED0041909D /* LocationTracker */ = {
 			isa = PBXGroup;
 			children = (
-				C3DFB93C175724A200F4380F /* MapViewController.h */,
-				C3DFB93D175724A200F4380F /* MapViewController.m */,
-				C35C868717448DED0041909D /* AppDelegate.h */,
+				C3ACDA30175BEF40009B2A37 /* BusViewController.h */,
+				C3ACDA31175BEF40009B2A37 /* BusViewController.m */,
 				C35C868817448DED0041909D /* AppDelegate.m */,
+				C35C868717448DED0041909D /* AppDelegate.h */,
 				C35C869017448DED0041909D /* MainStoryboard.storyboard */,
 				C35C869317448DED0041909D /* MainViewController.h */,
 				C35C869417448DED0041909D /* MainViewController.m */,
@@ -276,7 +276,7 @@
 				C35C868917448DED0041909D /* AppDelegate.m in Sources */,
 				C35C869517448DED0041909D /* MainViewController.m in Sources */,
 				C35C869817448DED0041909D /* FlipsideViewController.m in Sources */,
-				C3DFB93E175724A200F4380F /* MapViewController.m in Sources */,
+				C3ACDA32175BEF40009B2A37 /* BusViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
