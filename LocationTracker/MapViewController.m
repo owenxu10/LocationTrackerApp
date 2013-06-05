@@ -7,28 +7,53 @@
 //
 
 #import "MapViewController.h"
+#import <GoogleMaps/GoogleMaps.h>
 
-@interface MapViewController ()
+@interface MapViewController (){
+    GMSMapView *mapView_;
+}
+
 
 @end
 
 @implementation MapViewController
+@synthesize Latitude;
+@synthesize Longitude;
+@synthesize busname;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+
+/*- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
     }
     return self;
-}
+}*/
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    self.navigationItem.title = busname;
+    
+    self.navigationController.navigationBar.backItem.title = @"List";
+    // Create a GMSCameraPosition that tells the map to display the
+    // coordinate -33.86,151.20 at zoom level 6.
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:Latitude longitude:Longitude zoom:8];
+    mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
+    mapView_.myLocationEnabled = YES;
+    self.view = mapView_;
+    
+    // Creates a marker in the center of the map.
+    GMSMarker *marker = [[GMSMarker alloc] init];
+    marker.position = CLLocationCoordinate2DMake(Latitude, Longitude);
+    marker.title = busname;
+    marker.snippet = @" how many mins";
+    marker.map = mapView_;
+    //[super viewDidLoad];
+	// Do any additional setup after loading the view, typically from a nib.}
 }
-
+    
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

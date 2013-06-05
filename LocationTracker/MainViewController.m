@@ -17,7 +17,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.navigationController setNavigationBarHidden:NO];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    UIBarButtonItem *temporaryBarButtonItem=[[UIBarButtonItem alloc] init];
+    temporaryBarButtonItem.title=@"Back";
+    self.navigationItem.backBarButtonItem = temporaryBarButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -32,6 +37,8 @@
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {

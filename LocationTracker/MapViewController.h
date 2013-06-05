@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MapViewController : UIViewController
-
+@property int Longitude;
+@property int Latitude;
+@property NSString *busname;
 @end
