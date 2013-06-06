@@ -39,6 +39,7 @@
 		C3DFB9541757265700F4380F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DFB9531757265700F4380F /* SystemConfiguration.framework */; };
 		C3DFB9561757265F00F4380F /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DFB9551757265F00F4380F /* GLKit.framework */; };
 		C3DFB9581757266600F4380F /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DFB9571757266600F4380F /* libc++.dylib */; };
+		D80912EB17604DD000ABF349 /* LocationTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D80912EA17604DD000ABF349 /* LocationTimerViewController.m */; };
 		D80DED10175ED9C70000B7FF /* DurationTimeCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = D80DED0F175ED9C70000B7FF /* DurationTimeCalculator.m */; };
 		D80DF03F175EF10C0000B7FF /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = D80DF03E175EF10C0000B7FF /* Location.m */; };
 		D8DD8C8B175ECFA60049B1C5 /* S4BClient_1024 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = D8DD8C8A175ECFA60049B1C5 /* S4BClient_1024 copy.png */; };
@@ -86,6 +87,8 @@
 		C3DFB9531757265700F4380F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C3DFB9551757265F00F4380F /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		C3DFB9571757266600F4380F /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		D80912E917604DD000ABF349 /* LocationTimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationTimerViewController.h; sourceTree = "<group>"; };
+		D80912EA17604DD000ABF349 /* LocationTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationTimerViewController.m; sourceTree = "<group>"; };
 		D80DED0E175ED9C70000B7FF /* DurationTimeCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DurationTimeCalculator.h; path = ../DurationTimeCalculator.h; sourceTree = "<group>"; };
 		D80DED0F175ED9C70000B7FF /* DurationTimeCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DurationTimeCalculator.m; path = ../DurationTimeCalculator.m; sourceTree = "<group>"; };
 		D80DF03D175EF10C0000B7FF /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
@@ -177,6 +180,8 @@
 				C35C868817448DED0041909D /* AppDelegate.m */,
 				C35C868717448DED0041909D /* AppDelegate.h */,
 				C35C869017448DED0041909D /* MainStoryboard.storyboard */,
+				D80912E917604DD000ABF349 /* LocationTimerViewController.h */,
+				D80912EA17604DD000ABF349 /* LocationTimerViewController.m */,
 				C35C869317448DED0041909D /* MainViewController.h */,
 				C35C869417448DED0041909D /* MainViewController.m */,
 				C35C869617448DED0041909D /* FlipsideViewController.h */,
@@ -297,6 +302,7 @@
 				C3ACDA32175BEF40009B2A37 /* BusViewController.m in Sources */,
 				D80DED10175ED9C70000B7FF /* DurationTimeCalculator.m in Sources */,
 				D80DF03F175EF10C0000B7FF /* Location.m in Sources */,
+				D80912EB17604DD000ABF349 /* LocationTimerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

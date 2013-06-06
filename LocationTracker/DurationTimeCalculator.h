@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Location.h"
 @interface DurationTimeCalculator : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *btn_get;
 @property (weak, nonatomic) IBOutlet UITextView *txt_response;
 
 - (IBAction)btn_pressed:(id)sender;
+- (NSString *) getDurationfrom: (Location*) origin to:(Location*) destination;
 @end
