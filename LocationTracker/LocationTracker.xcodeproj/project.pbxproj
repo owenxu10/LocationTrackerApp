@@ -21,7 +21,6 @@
 		C35C869517448DED0041909D /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C35C869417448DED0041909D /* MainViewController.m */; };
 		C35C869817448DED0041909D /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C35C869717448DED0041909D /* FlipsideViewController.m */; };
 		C35C86A017449C310041909D /* bus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C35C869F17449C310041909D /* bus.jpg */; };
-		C35C86A217449C350041909D /* Backgrounds1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C35C86A117449C350041909D /* Backgrounds1.jpg */; };
 		C35C86A417449C380041909D /* Friends.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C35C86A317449C380041909D /* Friends.jpg */; };
 		C35C86AA1744A16C0041909D /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = C35C86A91744A16C0041909D /* map.png */; };
 		C3ACDA32175BEF40009B2A37 /* BusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ACDA31175BEF40009B2A37 /* BusViewController.m */; };
@@ -40,6 +39,11 @@
 		C3DFB9541757265700F4380F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DFB9531757265700F4380F /* SystemConfiguration.framework */; };
 		C3DFB9561757265F00F4380F /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DFB9551757265F00F4380F /* GLKit.framework */; };
 		C3DFB9581757266600F4380F /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DFB9571757266600F4380F /* libc++.dylib */; };
+		D80DED10175ED9C70000B7FF /* DurationTimeCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = D80DED0F175ED9C70000B7FF /* DurationTimeCalculator.m */; };
+		D80DF03F175EF10C0000B7FF /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = D80DF03E175EF10C0000B7FF /* Location.m */; };
+		D8DD8C8B175ECFA60049B1C5 /* S4BClient_1024 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = D8DD8C8A175ECFA60049B1C5 /* S4BClient_1024 copy.png */; };
+		D8DD8C8D175ECFE00049B1C5 /* Backgrounds1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8DD8C8C175ECFE00049B1C5 /* Backgrounds1.jpg */; };
+		D8DD8C8F175ECFF50049B1C5 /* caricon copy.png in Resources */ = {isa = PBXBuildFile; fileRef = D8DD8C8E175ECFF50049B1C5 /* caricon copy.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,7 +67,6 @@
 		C35C869617448DED0041909D /* FlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
 		C35C869717448DED0041909D /* FlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
 		C35C869F17449C310041909D /* bus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bus.jpg; sourceTree = "<group>"; };
-		C35C86A117449C350041909D /* Backgrounds1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Backgrounds1.jpg; sourceTree = "<group>"; };
 		C35C86A317449C380041909D /* Friends.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Friends.jpg; sourceTree = "<group>"; };
 		C35C86A91744A16C0041909D /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		C3ACDA30175BEF40009B2A37 /* BusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusViewController.h; sourceTree = "<group>"; };
@@ -83,6 +86,13 @@
 		C3DFB9531757265700F4380F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C3DFB9551757265F00F4380F /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		C3DFB9571757266600F4380F /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		D80DED0E175ED9C70000B7FF /* DurationTimeCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DurationTimeCalculator.h; path = ../DurationTimeCalculator.h; sourceTree = "<group>"; };
+		D80DED0F175ED9C70000B7FF /* DurationTimeCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DurationTimeCalculator.m; path = ../DurationTimeCalculator.m; sourceTree = "<group>"; };
+		D80DF03D175EF10C0000B7FF /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		D80DF03E175EF10C0000B7FF /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		D8DD8C8A175ECFA60049B1C5 /* S4BClient_1024 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "S4BClient_1024 copy.png"; sourceTree = "<group>"; };
+		D8DD8C8C175ECFE00049B1C5 /* Backgrounds1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Backgrounds1.jpg; sourceTree = "<group>"; };
+		D8DD8C8E175ECFF50049B1C5 /* caricon copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "caricon copy.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +168,10 @@
 		C35C867E17448DED0041909D /* LocationTracker */ = {
 			isa = PBXGroup;
 			children = (
+				D80DED0E175ED9C70000B7FF /* DurationTimeCalculator.h */,
+				D80DED0F175ED9C70000B7FF /* DurationTimeCalculator.m */,
+				D80DF03D175EF10C0000B7FF /* Location.h */,
+				D80DF03E175EF10C0000B7FF /* Location.m */,
 				C3ACDA30175BEF40009B2A37 /* BusViewController.h */,
 				C3ACDA31175BEF40009B2A37 /* BusViewController.m */,
 				C35C868817448DED0041909D /* AppDelegate.m */,
@@ -190,10 +204,12 @@
 		C35C869E17449C230041909D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D8DD8C8A175ECFA60049B1C5 /* S4BClient_1024 copy.png */,
+				D8DD8C8E175ECFF50049B1C5 /* caricon copy.png */,
+				D8DD8C8C175ECFE00049B1C5 /* Backgrounds1.jpg */,
 				C32507B01744B26700081728 /* FriendMap.jpg */,
 				C35C86A91744A16C0041909D /* map.png */,
 				C35C86A317449C380041909D /* Friends.jpg */,
-				C35C86A117449C350041909D /* Backgrounds1.jpg */,
 				C35C869F17449C310041909D /* bus.jpg */,
 			);
 			name = Images;
@@ -257,11 +273,13 @@
 				C35C868F17448DED0041909D /* Default-568h@2x.png in Resources */,
 				C35C869217448DED0041909D /* MainStoryboard.storyboard in Resources */,
 				C35C86A017449C310041909D /* bus.jpg in Resources */,
-				C35C86A217449C350041909D /* Backgrounds1.jpg in Resources */,
 				C35C86A417449C380041909D /* Friends.jpg in Resources */,
 				C35C86AA1744A16C0041909D /* map.png in Resources */,
 				C32507B11744B26700081728 /* FriendMap.jpg in Resources */,
 				C3BD64621757286500B0CC40 /* GoogleMaps.bundle in Resources */,
+				D8DD8C8B175ECFA60049B1C5 /* S4BClient_1024 copy.png in Resources */,
+				D8DD8C8D175ECFE00049B1C5 /* Backgrounds1.jpg in Resources */,
+				D8DD8C8F175ECFF50049B1C5 /* caricon copy.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +295,8 @@
 				C35C869517448DED0041909D /* MainViewController.m in Sources */,
 				C35C869817448DED0041909D /* FlipsideViewController.m in Sources */,
 				C3ACDA32175BEF40009B2A37 /* BusViewController.m in Sources */,
+				D80DED10175ED9C70000B7FF /* DurationTimeCalculator.m in Sources */,
+				D80DF03F175EF10C0000B7FF /* Location.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
