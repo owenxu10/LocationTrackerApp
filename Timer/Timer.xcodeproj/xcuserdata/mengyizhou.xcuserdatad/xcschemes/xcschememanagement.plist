@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>LocationTracker.xcscheme</key>
+		<key>Timer.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>C35C867417448DED0041909D</key>
+		<key>C32369E9175FC3D6006F135F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

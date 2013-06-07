@@ -4,16 +4,16 @@
    version = "1.0">
    <FileBreakpoints>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "BusListViewController.h"
-         timestampString = "391900953.333781"
+         filePath = "LocationTracker/LocationTimerViewController.h"
+         timestampString = "392341250.01659"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "13"
-         endingLineNumber = "13"
-         landmarkName = "@interface BusListViewController"
+         startingLineNumber = "18"
+         endingLineNumber = "18"
+         landmarkName = "@interface LocationTimerViewController"
          landmarkType = "2">
       </FileBreakpoint>
    </FileBreakpoints>

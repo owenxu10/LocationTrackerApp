@@ -40,7 +40,7 @@
 }
 
 - (IBAction)btn_pressed:(id)sender {
-   [NSTimer scheduledTimerWithTimeInterval: 1 target: self selector: @selector(handleTimer:) userInfo: nil repeats: YES];
+    [NSTimer scheduledTimerWithTimeInterval: 1 target: self selector: @selector(handleTimer:) userInfo: nil repeats: YES];
 }
 
 -(void) handleTimer:(NSTimer *) timer{
@@ -55,9 +55,10 @@
     DurationTimeCalculator *calculator = [[DurationTimeCalculator alloc] init];
     NSString *duration=[calculator getDurationfrom:origin to:destination];
     
-        NSMutableString *result=[[NSMutableString alloc]init];
-        [result appendString:self.txt_show.text];
-         [result appendString:duration];
-        self.txt_show.text = result;
-    }
+    NSMutableString *result=[[NSMutableString alloc]init];
+    [result appendString:self.txt_show.text];
+    NSLog(@"%@", duration);
+    [result appendString:duration];
+    self.txt_show.text = result;
+}
 @end

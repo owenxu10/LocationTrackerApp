@@ -7,7 +7,6 @@
 //
 
 #import "BusViewController.h"
-#import "MapViewController.h"
 
 @interface BusViewController ()
 {
@@ -28,7 +27,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.navigationController.navigationBar.backItem.title = @"Back";
+    
     [[self showAllBus]setDelegate:self];
     [[self showAllBus]setDataSource:self];
     arrayArduino = [[NSMutableArray alloc]init];
@@ -49,10 +48,6 @@
         webData = [[NSMutableData alloc]init];
     }
 
-    
-    UIBarButtonItem *temporaryBarButtonItem=[[UIBarButtonItem alloc] init];
-    temporaryBarButtonItem.title=@"List";
-    self.navigationItem.backBarButtonItem = temporaryBarButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -145,22 +140,6 @@
     
     return cell;
 }
-
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    
-    MapViewController *map = [[MapViewController alloc] init];
-    map.busname =[arrayArduino objectAtIndex:indexPath.row];
-    map.Latitude = [[arrayLatitude objectAtIndex:indexPath.row] doubleValue];
-    map.Longitude = [[arrayLongitude objectAtIndex:indexPath.row] doubleValue];
-    // Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:map animated:YES];
-    
-}
-
 
 
 

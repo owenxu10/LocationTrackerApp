@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C35C867417448DED0041909D"
-               BuildableName = "LocationTracker.app"
-               BlueprintName = "LocationTracker"
-               ReferencedContainer = "container:LocationTracker.xcodeproj">
+               BlueprintIdentifier = "C32369E9175FC3D6006F135F"
+               BuildableName = "Timer.app"
+               BlueprintName = "Timer"
+               ReferencedContainer = "container:Timer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C35C867417448DED0041909D"
-            BuildableName = "LocationTracker.app"
-            BlueprintName = "LocationTracker"
-            ReferencedContainer = "container:LocationTracker.xcodeproj">
+            BlueprintIdentifier = "C32369E9175FC3D6006F135F"
+            BuildableName = "Timer.app"
+            BlueprintName = "Timer"
+            ReferencedContainer = "container:Timer.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -51,10 +51,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C35C867417448DED0041909D"
-            BuildableName = "LocationTracker.app"
-            BlueprintName = "LocationTracker"
-            ReferencedContainer = "container:LocationTracker.xcodeproj">
+            BlueprintIdentifier = "C32369E9175FC3D6006F135F"
+            BuildableName = "Timer.app"
+            BlueprintName = "Timer"
+            ReferencedContainer = "container:Timer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -69,10 +69,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C35C867417448DED0041909D"
-            BuildableName = "LocationTracker.app"
-            BlueprintName = "LocationTracker"
-            ReferencedContainer = "container:LocationTracker.xcodeproj">
+            BlueprintIdentifier = "C32369E9175FC3D6006F135F"
+            BuildableName = "Timer.app"
+            BlueprintName = "Timer"
+            ReferencedContainer = "container:Timer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

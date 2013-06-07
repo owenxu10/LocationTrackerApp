@@ -16,18 +16,5 @@
          landmarkName = "@interface BusListViewController"
          landmarkType = "2">
       </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "LocationTracker/MapViewController.h"
-         timestampString = "392078994.861693"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "14"
-         endingLineNumber = "14"
-         landmarkName = "busname"
-         landmarkType = "19">
-      </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>
