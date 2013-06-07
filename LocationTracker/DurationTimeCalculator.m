@@ -33,7 +33,7 @@
         NSString *from=[NSString stringWithFormat:@"%f,%f",[origin latitude],[origin longitude]];
     NSString *to=[NSString stringWithFormat:@"%f,%f",[destination latitude],[destination longitude]];    NSString *web_url = [NSString stringWithFormat:@"http://maps.googleapis.com/maps/api/directions/json?origin=%@&destination=%@&sensor=false&mode=driving", from, to];
     
-    NSLog(@"%@", web_url);    
+    //NSLog(@"%@", web_url);
     NSURL *final_Url = [NSURL URLWithString:web_url];    
     NSData *data = [NSData dataWithContentsOfURL:final_Url];
     NSError *error;

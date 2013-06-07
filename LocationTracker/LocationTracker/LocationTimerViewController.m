@@ -57,6 +57,7 @@
     
         NSMutableString *result=[[NSMutableString alloc]init];
         [result appendString:self.txt_show.text];
+    NSLog(@"%@", duration);
          [result appendString:duration];
         self.txt_show.text = result;
     }
