@@ -1,0 +1,283 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BACAE60914BF39F000205355 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BACAE60814BF39F000205355 /* UIKit.framework */; };
+		BACAE60B14BF39F000205355 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BACAE60A14BF39F000205355 /* Foundation.framework */; };
+		BACAE60D14BF39F000205355 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BACAE60C14BF39F000205355 /* CoreGraphics.framework */; };
+		BACAE61314BF39F000205355 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BACAE61114BF39F000205355 /* InfoPlist.strings */; };
+		BACAE61514BF39F000205355 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BACAE61414BF39F000205355 /* main.m */; };
+		BACAE61914BF39F000205355 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BACAE61814BF39F000205355 /* AppDelegate.m */; };
+		BACAE62014BF3A0500205355 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BACAE61F14BF3A0500205355 /* CoreLocation.framework */; };
+		BACAE62514BF3AE200205355 /* CoreLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BACAE62314BF3AE200205355 /* CoreLocationViewController.m */; };
+		BACAE62614BF3AE200205355 /* CoreLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BACAE62414BF3AE200205355 /* CoreLocationViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BACAE60414BF39F000205355 /* xo-corelocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xo-corelocation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BACAE60814BF39F000205355 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BACAE60A14BF39F000205355 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BACAE60C14BF39F000205355 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BACAE61014BF39F000205355 /* xo-corelocation-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "xo-corelocation-Info.plist"; sourceTree = "<group>"; };
+		BACAE61214BF39F000205355 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BACAE61414BF39F000205355 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BACAE61614BF39F000205355 /* xo-corelocation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "xo-corelocation-Prefix.pch"; sourceTree = "<group>"; };
+		BACAE61714BF39F000205355 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BACAE61814BF39F000205355 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BACAE61F14BF3A0500205355 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		BACAE62214BF3AE200205355 /* CoreLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLocationViewController.h; sourceTree = "<group>"; };
+		BACAE62314BF3AE200205355 /* CoreLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLocationViewController.m; sourceTree = "<group>"; };
+		BACAE62414BF3AE200205355 /* CoreLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoreLocationViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BACAE60114BF39F000205355 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BACAE62014BF3A0500205355 /* CoreLocation.framework in Frameworks */,
+				BACAE60914BF39F000205355 /* UIKit.framework in Frameworks */,
+				BACAE60B14BF39F000205355 /* Foundation.framework in Frameworks */,
+				BACAE60D14BF39F000205355 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BACAE5F914BF39EF00205355 = {
+			isa = PBXGroup;
+			children = (
+				BACAE61F14BF3A0500205355 /* CoreLocation.framework */,
+				BACAE60E14BF39F000205355 /* xo-corelocation */,
+				BACAE60714BF39F000205355 /* Frameworks */,
+				BACAE60514BF39F000205355 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BACAE60514BF39F000205355 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BACAE60414BF39F000205355 /* xo-corelocation.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BACAE60714BF39F000205355 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BACAE60814BF39F000205355 /* UIKit.framework */,
+				BACAE60A14BF39F000205355 /* Foundation.framework */,
+				BACAE60C14BF39F000205355 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BACAE60E14BF39F000205355 /* xo-corelocation */ = {
+			isa = PBXGroup;
+			children = (
+				BACAE62114BF3AC300205355 /* CoreLocationViewController */,
+				BACAE61714BF39F000205355 /* AppDelegate.h */,
+				BACAE61814BF39F000205355 /* AppDelegate.m */,
+				BACAE60F14BF39F000205355 /* Supporting Files */,
+			);
+			path = "xo-corelocation";
+			sourceTree = "<group>";
+		};
+		BACAE60F14BF39F000205355 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BACAE61014BF39F000205355 /* xo-corelocation-Info.plist */,
+				BACAE61114BF39F000205355 /* InfoPlist.strings */,
+				BACAE61414BF39F000205355 /* main.m */,
+				BACAE61614BF39F000205355 /* xo-corelocation-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BACAE62114BF3AC300205355 /* CoreLocationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BACAE62214BF3AE200205355 /* CoreLocationViewController.h */,
+				BACAE62314BF3AE200205355 /* CoreLocationViewController.m */,
+				BACAE62414BF3AE200205355 /* CoreLocationViewController.xib */,
+			);
+			name = CoreLocationViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BACAE60314BF39F000205355 /* xo-corelocation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BACAE61C14BF39F000205355 /* Build configuration list for PBXNativeTarget "xo-corelocation" */;
+			buildPhases = (
+				BACAE60014BF39F000205355 /* Sources */,
+				BACAE60114BF39F000205355 /* Frameworks */,
+				BACAE60214BF39F000205355 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "xo-corelocation";
+			productName = "xo-corelocation";
+			productReference = BACAE60414BF39F000205355 /* xo-corelocation.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BACAE5FB14BF39EF00205355 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = BACAE5FE14BF39EF00205355 /* Build configuration list for PBXProject "xo-corelocation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BACAE5F914BF39EF00205355;
+			productRefGroup = BACAE60514BF39F000205355 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BACAE60314BF39F000205355 /* xo-corelocation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BACAE60214BF39F000205355 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BACAE61314BF39F000205355 /* InfoPlist.strings in Resources */,
+				BACAE62614BF3AE200205355 /* CoreLocationViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BACAE60014BF39F000205355 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BACAE61514BF39F000205355 /* main.m in Sources */,
+				BACAE61914BF39F000205355 /* AppDelegate.m in Sources */,
+				BACAE62514BF3AE200205355 /* CoreLocationViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BACAE61114BF39F000205355 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BACAE61214BF39F000205355 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BACAE61A14BF39F000205355 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BACAE61B14BF39F000205355 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BACAE61D14BF39F000205355 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "xo-corelocation/xo-corelocation-Prefix.pch";
+				INFOPLIST_FILE = "xo-corelocation/xo-corelocation-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BACAE61E14BF39F000205355 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "xo-corelocation/xo-corelocation-Prefix.pch";
+				INFOPLIST_FILE = "xo-corelocation/xo-corelocation-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BACAE5FE14BF39EF00205355 /* Build configuration list for PBXProject "xo-corelocation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BACAE61A14BF39F000205355 /* Debug */,
+				BACAE61B14BF39F000205355 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BACAE61C14BF39F000205355 /* Build configuration list for PBXNativeTarget "xo-corelocation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BACAE61D14BF39F000205355 /* Debug */,
+				BACAE61E14BF39F000205355 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BACAE5FB14BF39EF00205355 /* Project object */;
+}
