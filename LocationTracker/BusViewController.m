@@ -7,7 +7,7 @@
 //
 
 #import "BusViewController.h"
-#import "MapViewController.h"
+#import "OperationViewController.h"
 
 @interface BusViewController ()
 {
@@ -16,6 +16,9 @@
     NSMutableArray *arrayArduino;
     NSMutableArray *arrayLongitude;
     NSMutableArray *arrayLatitude;
+    NSString *busname;
+    NSNumber *SendLongitude;
+    NSNumber *SendLatitude;
 
 }
 
@@ -48,11 +51,10 @@
     {
         webData = [[NSMutableData alloc]init];
     }
-
-    
     UIBarButtonItem *temporaryBarButtonItem=[[UIBarButtonItem alloc] init];
     temporaryBarButtonItem.title=@"List";
     self.navigationItem.backBarButtonItem = temporaryBarButtonItem;
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -85,10 +87,10 @@
     
     for (NSDictionary *diction in allDataDictionary) {
         NSDictionary *arduino = [diction objectForKey:@"Arduino"];
-        NSDictionary *langitude = [diction objectForKey:@"Longitude"];
+        NSDictionary *longitude = [diction objectForKey:@"Longitude"];
          NSDictionary *latitude = [diction objectForKey:@"Latitude"];
         [arrayArduino addObject:arduino];
-        [arrayLongitude addObject:langitude];
+        [arrayLongitude addObject:longitude];
         [arrayLatitude addObject:latitude];
     }
     
@@ -140,11 +142,13 @@
     NSString *location = [NSString stringWithFormat:@"%f, %f",
                         numberLatitude.doubleValue, numberLongitude.doubleValue];
     
+
     cell.textLabel.text = [arrayArduino objectAtIndex:indexPath.row];
     cell.detailTextLabel.text = location;
     
     return cell;
 }
+
 
 #pragma mark - Table view delegate
 
@@ -152,16 +156,30 @@
 {
     // Navigation logic may go here. Create and push another view controller.
     
-    MapViewController *map = [[MapViewController alloc] init];
-    map.busname =[arrayArduino objectAtIndex:indexPath.row];
-    map.Latitude = [[arrayLatitude objectAtIndex:indexPath.row] doubleValue];
-    map.Longitude = [[arrayLongitude objectAtIndex:indexPath.row] doubleValue];
-    // Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:map animated:YES];
+    busname= [arrayArduino objectAtIndex:indexPath.row];
+    SendLatitude = [arrayLatitude objectAtIndex:indexPath.row];
+    SendLongitude = [arrayLongitude objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"operation" sender:self];
+
+   // OperationViewController *operation = [[OperationViewController alloc] init];
+    //map.busname =[arrayArduino objectAtIndex:indexPath.row];
     
+    // Pass the selected object to the new view controller.
+    //[self.navigationController pushViewController:operation animated:YES];
+    
+
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([[segue identifier] isEqualToString:@"operation"]){
+        OperationViewController *operation = [segue destinationViewController];
+        operation.title=busname;
+        operation.ReceiveLatitude= SendLatitude;
+        operation.ReceiveLongitude= SendLongitude;
+       
 
+}
+}
 
 
 @end
