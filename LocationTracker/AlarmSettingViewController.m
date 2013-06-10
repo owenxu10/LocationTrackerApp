@@ -7,6 +7,7 @@
 //
 
 #import "AlarmSettingViewController.h"
+#import "DaySettingViewController.h"
 
 @interface AlarmSettingViewController ()
 
@@ -22,6 +23,23 @@
 //    }
 //    return self;
 //}
+-(void) didDaySelection:(NSMutableArray *)selectedDay{
+    NSString *objects = @"";
+    for(id object in selectedDay){
+       objects = [NSString stringWithFormat:@"%@%@",objects,object];
+    }
+    _lblText.text = objects;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    //Get a handle on the view controller about be presented
+    DaySettingViewController *controller = segue.destinationViewController;
+    
+    if ([controller isKindOfClass:[DaySettingViewController class]]) {
+        controller.delegate = self;
+    }
+}
 
 - (void)viewDidLoad
 {
@@ -115,7 +133,7 @@
 //     // ...
 //     // Pass the selected object to the new view controller.
 //     [self.navigationController pushViewController:detailViewController animated:YES];
-//     */
+//     */f
 //}
 
 @end

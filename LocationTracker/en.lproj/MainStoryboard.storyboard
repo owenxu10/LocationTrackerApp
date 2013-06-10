@@ -339,7 +339,7 @@
                                             <constraint firstItem="8b7-Fi-vbW" firstAttribute="top" secondItem="3S3-UP-LLn" secondAttribute="top" constant="11" id="gCX-V8-5CJ"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="I8a-kO-bhE" kind="push" id="ULO-ge-RDN"/>
+                                            <segue destination="I8a-kO-bhE" kind="push" identifier="SetRepeatDay" id="ULO-ge-RDN"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -386,7 +386,7 @@
                                             <constraint firstItem="UPw-Mr-ekI" firstAttribute="leading" secondItem="GLN-8x-mvv" secondAttribute="leading" constant="20" type="default" id="nDO-nV-f8c"/>
                                         </constraints>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="xJC-0x-oCK">
+                                    <tableViewCell tag="1" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="xJC-0x-oCK">
                                         <rect key="frame" x="0.0" y="44" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -406,7 +406,7 @@
                                             <constraint firstItem="AiP-fc-hvK" firstAttribute="top" secondItem="xJC-0x-oCK" secondAttribute="top" constant="11" id="RM0-E3-Hyu"/>
                                         </constraints>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="5Xc-FQ-5p0">
+                                    <tableViewCell tag="2" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="5Xc-FQ-5p0">
                                         <rect key="frame" x="0.0" y="88" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -426,7 +426,7 @@
                                             <constraint firstItem="TQ0-7o-43P" firstAttribute="leading" secondItem="5Xc-FQ-5p0" secondAttribute="leading" constant="20" type="default" id="XQT-7t-HRN"/>
                                         </constraints>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="EgC-qE-gAS">
+                                    <tableViewCell tag="3" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="EgC-qE-gAS">
                                         <rect key="frame" x="0.0" y="132" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -446,7 +446,7 @@
                                             <constraint firstItem="UQC-k7-yjo" firstAttribute="top" secondItem="EgC-qE-gAS" secondAttribute="top" constant="11" id="Hkr-m2-f1n"/>
                                         </constraints>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="yHF-n4-0C1">
+                                    <tableViewCell tag="4" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="yHF-n4-0C1">
                                         <rect key="frame" x="0.0" y="176" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -466,7 +466,7 @@
                                             <constraint firstItem="OFl-se-QIU" firstAttribute="leading" secondItem="yHF-n4-0C1" secondAttribute="leading" constant="20" type="default" id="vQo-g4-mCL"/>
                                         </constraints>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="asd-zi-zwO">
+                                    <tableViewCell tag="5" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="asd-zi-zwO">
                                         <rect key="frame" x="0.0" y="220" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -486,7 +486,7 @@
                                             <constraint firstItem="hty-Lx-xgg" firstAttribute="top" secondItem="asd-zi-zwO" secondAttribute="top" constant="11" id="tab-cg-IbL"/>
                                         </constraints>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="kOW-ER-Psv">
+                                    <tableViewCell tag="6" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="kOW-ER-Psv">
                                         <rect key="frame" x="0.0" y="264" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -505,15 +505,6 @@
                                             <constraint firstItem="jp6-fC-foR" firstAttribute="top" secondItem="kOW-ER-Psv" secondAttribute="top" constant="11" id="MDy-n9-JmI"/>
                                             <constraint firstItem="jp6-fC-foR" firstAttribute="leading" secondItem="kOW-ER-Psv" secondAttribute="leading" constant="20" type="default" id="nOr-F2-ubk"/>
                                         </constraints>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="HzX-kd-rnn">
-                                        <rect key="frame" x="0.0" y="308" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -649,62 +640,6 @@
         <image name="Backgrounds1.jpg" width="972" height="1200"/>
         <image name="caricon copy.png" width="506" height="506"/>
     </resources>
-    <classes>
-        <class className="AlarmSettingViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AlarmSettingViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="lblText" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="BusViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BusViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="refresh:"/>
-                <relationship kind="outlet" name="showAllBus" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="DaySettingViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DaySettingViewController.h"/>
-        </class>
-        <class className="DurationTimeCalculator" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DurationTimeCalculator.h"/>
-            <relationships>
-                <relationship kind="action" name="btn_pressed:"/>
-                <relationship kind="outlet" name="btn_get" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="txt_response" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="FlipsideViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FlipsideViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="done:"/>
-            </relationships>
-        </class>
-        <class className="LocationTimerViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationTimerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="btn_pressed:"/>
-                <relationship kind="outlet" name="btn_get" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="txt_show" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="MainViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
-        </class>
-        <class className="MapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="OperationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/OperationViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="ShowOnMap:"/>
-                <relationship kind="outlet" name="info" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

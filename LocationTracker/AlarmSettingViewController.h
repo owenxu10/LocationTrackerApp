@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface AlarmSettingViewController : UITableViewController
+#import "DaySettingViewController.h"
+@interface AlarmSettingViewController : UITableViewController <AlarmSettingDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *lblText;
 
 @end

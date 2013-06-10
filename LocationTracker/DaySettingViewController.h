@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DaySettingViewController : UITableViewController< UITableViewDelegate,  UITableViewDataSource>
+@protocol AlarmSettingDelegate <NSObject>
+@optional
+-(void) didDaySelection:(NSMutableArray *) selectedDay;
+@end
 
+@interface DaySettingViewController : UITableViewController< UITableViewDelegate,  UITableViewDataSource>
+@property (nonatomic) id<AlarmSettingDelegate> delegate;
 @end
