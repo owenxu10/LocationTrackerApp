@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MapViewController : UIViewController
-@property int Longitude;
-@property int Latitude;
+@interface MapViewController : UIViewController 
+@property double Longitude;
+@property double Latitude;
 @property NSString *busname;
 @end
