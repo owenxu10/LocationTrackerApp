@@ -35,7 +35,7 @@
 - (void)viewDidLoad
 {
     
-    //self.navigationItem.title = busname;
+    self.navigationItem.title = busname;
     
     // Create a GMSCameraPosition that tells the map to display the
     // coordinate -33.86,151.20 at zoom level 6.

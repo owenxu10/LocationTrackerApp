@@ -45,10 +45,10 @@
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
     // Navigation logic may go here. Create and push another view controller.
     
-      AlarmSettingViewController *detailViewController = [[AlarmSettingViewController alloc] initWithNibName:@"AlarmSettingViewController" bundle:nil];
+//      AlarmSettingViewController *detailViewController = [[AlarmSettingViewController alloc] initWithNibName:@"AlarmSettingViewController" bundle:nil];
      // ...
      // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
+//     [self.navigationController pushViewController:detailViewController animated:YES];
     
 }
 

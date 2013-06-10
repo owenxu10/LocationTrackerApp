@@ -43,6 +43,7 @@
 		D82E30371762A6AF004EE303 /* DurationTimeCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = D82E2FD41762A04B004EE303 /* DurationTimeCalculator.m */; };
 		D82E303A1762A6DD004EE303 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82E30391762A6DD004EE303 /* MapViewController.m */; };
 		D82E303D1762F7FF004EE303 /* DaySettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82E303C1762F7FF004EE303 /* DaySettingViewController.m */; };
+		D88D0145176628F70048694C /* OperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D88D0144176628E30048694C /* OperationViewController.m */; };
 		D8F783161764450D00DAD800 /* AlarmSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F783151764450D00DAD800 /* AlarmSettingViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +96,8 @@
 		D82E30391762A6DD004EE303 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		D82E303B1762F7FF004EE303 /* DaySettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaySettingViewController.h; sourceTree = "<group>"; };
 		D82E303C1762F7FF004EE303 /* DaySettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaySettingViewController.m; sourceTree = "<group>"; };
+		D88D0143176628E30048694C /* OperationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperationViewController.h; sourceTree = "<group>"; };
+		D88D0144176628E30048694C /* OperationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OperationViewController.m; sourceTree = "<group>"; };
 		D8F783141764450D00DAD800 /* AlarmSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmSettingViewController.h; sourceTree = "<group>"; };
 		D8F783151764450D00DAD800 /* AlarmSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmSettingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -172,6 +175,8 @@
 		C35C867E17448DED0041909D /* LocationTracker */ = {
 			isa = PBXGroup;
 			children = (
+				D88D0143176628E30048694C /* OperationViewController.h */,
+				D88D0144176628E30048694C /* OperationViewController.m */,
 				D8F783141764450D00DAD800 /* AlarmSettingViewController.h */,
 				D8F783151764450D00DAD800 /* AlarmSettingViewController.m */,
 				D82E30381762A6DD004EE303 /* MapViewController.h */,
@@ -294,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D88D0145176628F70048694C /* OperationViewController.m in Sources */,
 				D82E30371762A6AF004EE303 /* DurationTimeCalculator.m in Sources */,
 				C35C868517448DED0041909D /* main.m in Sources */,
 				C35C868917448DED0041909D /* AppDelegate.m in Sources */,
@@ -396,6 +402,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LocationTracker/LocationTracker-Prefix.pch";
 				INFOPLIST_FILE = "LocationTracker/LocationTracker-Info.plist";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -411,6 +418,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LocationTracker/LocationTracker-Prefix.pch";
 				INFOPLIST_FILE = "LocationTracker/LocationTracker-Info.plist";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

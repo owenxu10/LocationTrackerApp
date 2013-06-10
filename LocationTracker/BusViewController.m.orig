@@ -7,7 +7,10 @@
 //
 
 #import "BusViewController.h"
+<<<<<<< HEAD
+=======
 #import "OperationViewController.h"
+>>>>>>> 1eb3b67935112df27223a600aaa0ba476feb6ae6
 
 @interface BusViewController ()
 {
@@ -31,7 +34,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.navigationController.navigationBar.backItem.title = @"Back";
+    
     [[self showAllBus]setDelegate:self];
     [[self showAllBus]setDataSource:self];
     arrayArduino = [[NSMutableArray alloc]init];
@@ -42,7 +45,7 @@
     [arrayLongitude removeAllObjects];
     [arrayLatitude removeAllObjects];
     
-    NSURL *url = [NSURL URLWithString:@"http://asiangroup.mireene.com/locationTracker/index.php/get_newest_loc"];
+    NSURL *url = [NSURL URLWithString:@"http://localhost/locationTracker/index.php"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
     connection = [NSURLConnection connectionWithRequest:request delegate:self];
@@ -51,9 +54,12 @@
     {
         webData = [[NSMutableData alloc]init];
     }
+<<<<<<< HEAD
+=======
     UIBarButtonItem *temporaryBarButtonItem=[[UIBarButtonItem alloc] init];
     temporaryBarButtonItem.title=@"List";
     self.navigationItem.backBarButtonItem = temporaryBarButtonItem;
+>>>>>>> 1eb3b67935112df27223a600aaa0ba476feb6ae6
 
 }
 
@@ -86,7 +92,7 @@
     //NSArray *arrayOfEntry = [feed objectForKey:@"entry"];
     
     for (NSDictionary *diction in allDataDictionary) {
-        NSDictionary *arduino = [diction objectForKey:@"DeviceID"];
+        NSDictionary *arduino = [diction objectForKey:@"Arduino"];
         NSDictionary *longitude = [diction objectForKey:@"Longitude"];
          NSDictionary *latitude = [diction objectForKey:@"Latitude"];
         [arrayArduino addObject:arduino];
@@ -106,7 +112,7 @@
     //    NSString *urlStr = [NSString stringWithFormat:@"http://itunes.apple.com/us/rss/topalbums/limit=%d/json", [number intValue]];
     //    NSURL *url = [NSURL URLWithString:urlStr];
     
-    NSURL *url = [NSURL URLWithString:@"http://asiangroup.mireene.com/locationTracker/index.php/get_newest_loc"];
+    NSURL *url = [NSURL URLWithString:@"http://localhost/locationTracker/index.php"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
     connection = [NSURLConnection connectionWithRequest:request delegate:self];
@@ -149,6 +155,8 @@
     return cell;
 }
 
+<<<<<<< HEAD
+=======
 
 #pragma mark - Table view delegate
 
@@ -180,6 +188,7 @@
 
 }
 }
+>>>>>>> 1eb3b67935112df27223a600aaa0ba476feb6ae6
 
 
 @end

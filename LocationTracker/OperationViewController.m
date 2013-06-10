@@ -32,11 +32,11 @@
 	// Do any additional setup after loading the view.
     [super viewDidLoad];
     info.text=[NSString stringWithFormat:@"%f, %f",
-                        ReceiveLatitude.doubleValue, ReceiveLongitude.doubleValue];
+               ReceiveLatitude.doubleValue, ReceiveLongitude.doubleValue];
     UIBarButtonItem *temporaryBarButtonItem=[[UIBarButtonItem alloc] init];
     temporaryBarButtonItem.title=@"Operation";
     self.navigationItem.backBarButtonItem = temporaryBarButtonItem;
-
+    
 }
 
 - (void)didReceiveMemoryWarning
