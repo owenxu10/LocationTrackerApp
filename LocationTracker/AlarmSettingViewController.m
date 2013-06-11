@@ -16,13 +16,16 @@
 @implementation AlarmSettingViewController
 @synthesize alarmTime = _alarmTime;
 @synthesize lblText = _lblText;
+@synthesize RepeatDay;
+@synthesize StopForLongTime;
 
 -(void) didDaySelection:(NSMutableArray *)selectedDay{
     NSString *objects = @"";
     for(id object in selectedDay){
-       objects = [NSString stringWithFormat:@"%@%@",objects,object];
+        
+       objects = [NSString stringWithFormat:@"%@,%@",objects,object];
     }
-    _lblText.text = objects;
+    RepeatDay.text = objects;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -41,8 +44,13 @@
 }
 
 - (IBAction)savePressed:(id)sender {
+    BOOL LongTime = StopForLongTime.isOn;
     int alarm = (int)floor(_alarmTime.countDownDuration);
     NSString *strTest = [NSString stringWithFormat:@"%d", alarm];
-    _lblText.text = strTest;
+    
+    if(LongTime==YES ) _lblText.text = @"Yes";
+    else _lblText.text = @"No";
+        
+   // _lblText.text = strTest;
 }
 @end

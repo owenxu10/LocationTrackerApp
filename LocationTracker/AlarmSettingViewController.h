@@ -14,5 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnSave;
 - (IBAction)savePressed:(id)sender;
 @property (weak, nonatomic) IBOutlet UIDatePicker *alarmTime;
+@property (weak, nonatomic) IBOutlet UISwitch *StopForLongTime;
+@property (weak, nonatomic) IBOutlet UILabel *RepeatDay;
 
 @end
