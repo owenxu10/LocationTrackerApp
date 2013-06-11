@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hvT-k3-oKK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3103" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hvT-k3-oKK">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -393,13 +393,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="3S3-UP-LLn" firstAttribute="top" secondItem="x4r-Kk-jDC" secondAttribute="top" type="default" id="3cv-R5-yQS"/>
-                            <constraint firstItem="aqc-fn-ql0" firstAttribute="leading" secondItem="x4r-Kk-jDC" secondAttribute="leading" type="default" id="IaV-il-qlb"/>
-                            <constraint firstItem="aqc-fn-ql0" firstAttribute="trailing" secondItem="x4r-Kk-jDC" secondAttribute="trailing" type="default" id="PXt-T4-oHk"/>
-                            <constraint firstItem="XnM-zv-EGu" firstAttribute="centerX" secondItem="aqc-fn-ql0" secondAttribute="centerX" type="default" id="XLj-XK-kTy"/>
+                            <constraint firstAttribute="bottom" secondItem="3S3-UP-LLn" secondAttribute="bottom" constant="416" id="7Ka-fQ-wGA"/>
+                            <constraint firstItem="aqc-fn-ql0" firstAttribute="trailing" secondItem="x4r-Kk-jDC" secondAttribute="trailing" type="default" id="ANz-bY-bxe"/>
+                            <constraint firstItem="aqc-fn-ql0" firstAttribute="leading" secondItem="x4r-Kk-jDC" secondAttribute="leading" type="default" id="QUm-7G-CEt"/>
+                            <constraint firstItem="aqc-fn-ql0" firstAttribute="top" secondItem="x4r-Kk-jDC" secondAttribute="top" constant="44" id="aEQ-qG-FPB"/>
                             <constraint firstItem="3S3-UP-LLn" firstAttribute="leading" secondItem="x4r-Kk-jDC" secondAttribute="leading" type="default" id="cyv-fz-6Fe"/>
-                            <constraint firstAttribute="bottom" secondItem="3S3-UP-LLn" secondAttribute="bottom" constant="416" id="oGg-Dl-Uxi"/>
-                            <constraint firstAttribute="bottom" secondItem="XnM-zv-EGu" secondAttribute="bottom" constant="83" id="xHR-uO-lJz"/>
-                            <constraint firstItem="aqc-fn-ql0" firstAttribute="top" secondItem="x4r-Kk-jDC" secondAttribute="top" constant="45" id="yO7-GQ-ooZ"/>
+                            <constraint firstAttribute="bottom" secondItem="XnM-zv-EGu" secondAttribute="bottom" constant="104" id="sSx-hY-i3W"/>
+                            <constraint firstItem="XnM-zv-EGu" firstAttribute="centerX" secondItem="aqc-fn-ql0" secondAttribute="centerX" type="default" id="yIY-7A-cLf"/>
                             <constraint firstItem="3S3-UP-LLn" firstAttribute="trailing" secondItem="x4r-Kk-jDC" secondAttribute="trailing" type="default" id="zoK-YQ-xNt"/>
                         </constraints>
                     </view>
@@ -419,7 +419,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rmf-dz-y44" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2443" y="303"/>
+            <point key="canvasLocation" x="2419" y="303"/>
         </scene>
         <!--Day Setting View Controller-->
         <scene sceneID="lFS-JC-Nui">
@@ -584,7 +584,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XEB-bs-TrO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2903" y="495"/>
+            <point key="canvasLocation" x="2975" y="303"/>
         </scene>
         <!--Location Timer View Controller-->
         <scene sceneID="FYA-y1-1Hy">
