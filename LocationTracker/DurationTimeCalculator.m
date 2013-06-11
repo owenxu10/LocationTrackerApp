@@ -18,14 +18,12 @@
 
 - (IBAction)btn_pressed:(id)sender{
     Location *origin = [[Location alloc]init];
-    [origin setLatitude:43.01318000000001];
-    [origin setLongitude:-83.71310000000001];
+    [origin setLatitude:0.000000];
+    [origin setLongitude:0.000000];
     
     Location *destination = [[Location alloc]init];
-    [destination setLatitude:45.50987000000001];
-    [destination setLongitude:-73.553770];
-    NSString *duration=[self getDurationfrom:origin to:destination];
-    self.txt_response.text=  duration;
+    [destination setLatitude:4301349.000000];
+    [destination setLongitude:-8371489.000000];
 }
 
 - (NSString *) getDurationfrom: (Location*) origin to:(Location*) destination{
