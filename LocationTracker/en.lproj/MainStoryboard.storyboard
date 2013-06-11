@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3103" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hvT-k3-oKK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hvT-k3-oKK">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -18,7 +18,7 @@
                                     <constraint firstAttribute="height" constant="427" id="fPM-Vl-7Uq"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" id="pti-4Q-dIp">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" id="pti-4Q-dIp">
                                         <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -65,11 +65,8 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXV-Yf-nzq">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="85" id="dxl-5C-WLm"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Show On Map">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -77,21 +74,52 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="ShowOnMap:" destination="dyl-uD-EYk" eventType="touchUpInside" id="gVr-Xp-zek"/>
                                     <segue destination="PsC-l6-Ogv" kind="push" id="WTs-FA-CKK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kf8-o9-RjO">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="MvB-Gu-ZiF"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Set Alarm">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="SlD-Lz-fDK" kind="push" id="voc-bh-yJO"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5H-uu-arx">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XG2-eW-cZp">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="267" id="e6F-uU-JCv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Get current Location">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showcurrent:" destination="dyl-uD-EYk" eventType="touchUpInside" id="czH-iB-OmT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pp-en-GA6">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3X-Vi-w2k">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -99,18 +127,25 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fXV-Yf-nzq" firstAttribute="leading" secondItem="lby-ZY-2rr" secondAttribute="leading" constant="112" id="HhK-8m-1wl"/>
-                            <constraint firstItem="Z5H-uu-arx" firstAttribute="leading" secondItem="lby-ZY-2rr" secondAttribute="leading" constant="105" id="KWU-41-fy2"/>
-                            <constraint firstItem="fXV-Yf-nzq" firstAttribute="top" secondItem="lby-ZY-2rr" secondAttribute="top" constant="88" id="LvL-rl-QGD"/>
-                            <constraint firstItem="kf8-o9-RjO" firstAttribute="top" secondItem="lby-ZY-2rr" secondAttribute="top" constant="208" id="TZF-dB-ObO"/>
-                            <constraint firstItem="kf8-o9-RjO" firstAttribute="trailing" secondItem="fXV-Yf-nzq" secondAttribute="trailing" type="default" id="dCf-eq-wRh"/>
-                            <constraint firstItem="kf8-o9-RjO" firstAttribute="leading" secondItem="fXV-Yf-nzq" secondAttribute="leading" type="default" id="m6P-q1-w9M"/>
-                            <constraint firstAttribute="bottom" secondItem="Z5H-uu-arx" secondAttribute="bottom" constant="107" id="yhj-ex-NEV"/>
+                            <constraint firstItem="fXV-Yf-nzq" firstAttribute="leading" secondItem="XG2-eW-cZp" secondAttribute="leading" type="default" id="2kq-ZS-EK7"/>
+                            <constraint firstAttribute="bottom" secondItem="fXV-Yf-nzq" secondAttribute="bottom" constant="47" id="7B8-cE-mxF"/>
+                            <constraint firstItem="Z5H-uu-arx" firstAttribute="top" secondItem="lby-ZY-2rr" secondAttribute="top" constant="134" id="9D3-bq-94F"/>
+                            <constraint firstItem="4pp-en-GA6" firstAttribute="top" secondItem="lby-ZY-2rr" secondAttribute="top" constant="84" id="BYc-FQ-Ux4"/>
+                            <constraint firstItem="4pp-en-GA6" firstAttribute="leading" secondItem="lby-ZY-2rr" secondAttribute="leading" constant="46" id="FwH-wk-pmX"/>
+                            <constraint firstAttribute="trailing" secondItem="kf8-o9-RjO" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="OJN-II-uN8"/>
+                            <constraint firstItem="fXV-Yf-nzq" firstAttribute="top" secondItem="XG2-eW-cZp" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="VO3-A4-mmw"/>
+                            <constraint firstAttribute="trailing" secondItem="XG2-eW-cZp" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="fgF-zJ-jaA"/>
+                            <constraint firstItem="P3X-Vi-w2k" firstAttribute="top" secondItem="lby-ZY-2rr" secondAttribute="top" constant="184" id="g2g-LA-oMy"/>
+                            <constraint firstItem="Z5H-uu-arx" firstAttribute="leading" secondItem="4pp-en-GA6" secondAttribute="leading" type="default" id="hqU-Yc-35Y"/>
+                            <constraint firstItem="P3X-Vi-w2k" firstAttribute="leading" secondItem="Z5H-uu-arx" secondAttribute="leading" type="default" id="qEl-ms-0Uv"/>
+                            <constraint firstItem="kf8-o9-RjO" firstAttribute="baseline" secondItem="fXV-Yf-nzq" secondAttribute="baseline" type="default" id="qUK-fZ-dhn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="N7u-tg-jr9"/>
                     <connections>
                         <outlet property="info" destination="Z5H-uu-arx" id="55q-Ig-pJa"/>
+                        <outlet property="location" destination="4pp-en-GA6" id="kxv-xe-MZd"/>
+                        <outlet property="time" destination="P3X-Vi-w2k" id="ms2-PY-CLc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yWe-Tk-n98" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -130,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tla-0Q-pcw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3387" y="-445"/>
+            <point key="canvasLocation" x="3455" y="-644"/>
         </scene>
         <!--Duration Time Calculator-->
         <scene sceneID="tuT-Ki-Q12">
@@ -216,8 +251,8 @@
                             <imageView userInteractionEnabled="NO" alpha="0.70000000000000007" contentMode="scaleToFill" image="Backgrounds1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="eiO-RU-QQO"/>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wzW-8Z-JMv">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="121" id="Hkm-B8-m99"/>
-                                    <constraint firstAttribute="height" constant="121" id="ORd-Rs-i9d"/>
+                                    <constraint firstAttribute="width" constant="183" id="hCa-eK-g4q"/>
+                                    <constraint firstAttribute="height" constant="182" id="w1O-GV-lPg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="caricon copy.png">
@@ -256,35 +291,20 @@
                                     <segue destination="LDD-7Y-49i" kind="push" id="etz-9e-MhG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjC-AH-8tT">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="SlD-Lz-fDK" kind="push" id="97p-IT-EOS"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wzW-8Z-JMv" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="126" id="5HB-XS-VEa"/>
                             <constraint firstItem="eiO-RU-QQO" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="9CU-1E-I6j"/>
                             <constraint firstAttribute="bottom" secondItem="FoO-JL-3GI" secondAttribute="bottom" constant="77" id="CSM-qr-Cee"/>
-                            <constraint firstAttribute="bottom" secondItem="yjC-AH-8tT" secondAttribute="bottom" constant="57" id="Hzi-QC-zvM"/>
-                            <constraint firstItem="yjC-AH-8tT" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="45" id="Kea-b1-kiN"/>
                             <constraint firstItem="Yf8-Ds-3mr" firstAttribute="top" secondItem="3" secondAttribute="top" constant="83" id="OA8-ES-Cu4"/>
                             <constraint firstItem="eiO-RU-QQO" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="WE7-66-n3A"/>
                             <constraint firstAttribute="trailing" secondItem="FoO-JL-3GI" secondAttribute="trailing" constant="33" id="Yt2-Lc-97X"/>
                             <constraint firstItem="eiO-RU-QQO" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="ZHo-CB-niG"/>
                             <constraint firstAttribute="trailing" secondItem="10" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="apl-1S-UOC"/>
+                            <constraint firstItem="wzW-8Z-JMv" firstAttribute="top" secondItem="Yf8-Ds-3mr" secondAttribute="top" type="default" id="bVF-7M-sMo"/>
                             <constraint firstAttribute="bottom" secondItem="10" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="bcr-if-aDO"/>
                             <constraint firstItem="eiO-RU-QQO" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="k0R-eT-OGv"/>
-                            <constraint firstItem="wzW-8Z-JMv" firstAttribute="top" secondItem="3" secondAttribute="top" constant="91" id="kRe-e2-JdX"/>
+                            <constraint firstItem="wzW-8Z-JMv" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="92" id="nup-Wc-nXX"/>
                             <constraint firstItem="Yf8-Ds-3mr" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="tU4-1i-v7Z"/>
                         </constraints>
                     </view>
@@ -311,7 +331,7 @@
                                     <!--2013-06-05 19:08:06 +0000-->
                                 </date>
                                 <timeZone key="timeZone" name="America/Los_Angeles">
-                                    <mutableData key="data">
+                                    <data key="data">
 VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
 y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
 5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
@@ -329,7 +349,7 @@ f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
-</mutableData>
+</data>
                                 </timeZone>
                             </datePicker>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="3S3-UP-LLn">
@@ -399,7 +419,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rmf-dz-y44" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1975" y="905"/>
+            <point key="canvasLocation" x="2443" y="303"/>
         </scene>
         <!--Day Setting View Controller-->
         <scene sceneID="lFS-JC-Nui">
@@ -564,7 +584,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XEB-bs-TrO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2421" y="925"/>
+            <point key="canvasLocation" x="2903" y="495"/>
         </scene>
         <!--Location Timer View Controller-->
         <scene sceneID="FYA-y1-1Hy">
@@ -613,7 +633,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Nx-de-w9k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2268" y="206"/>
+            <point key="canvasLocation" x="1610" y="905"/>
         </scene>
         <!--Flipside View Controller-->
         <scene sceneID="9">
@@ -660,7 +680,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2784" y="206"/>
+            <point key="canvasLocation" x="2068" y="925"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="V0q-5D-McK">
@@ -741,8 +761,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <class className="OperationViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/OperationViewController.h"/>
             <relationships>
-                <relationship kind="action" name="ShowOnMap:"/>
+                <relationship kind="action" name="showcurrent:"/>
                 <relationship kind="outlet" name="info" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="location" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="time" candidateClass="UILabel"/>
             </relationships>
         </class>
     </classes>

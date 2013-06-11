@@ -7,11 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import "Location.h"
+#import "MapViewController.h"
 
-@interface OperationViewController : UIViewController
+@interface OperationViewController : UIViewController <CLLocationManagerDelegate>
+
+@property (retain, nonatomic) CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet UILabel *info;
+@property (weak, nonatomic) IBOutlet UILabel *location;
+@property (weak, nonatomic) IBOutlet UILabel *time;
 @property NSNumber *ReceiveLatitude;
 @property NSNumber *ReceiveLongitude;
-- (IBAction)ShowOnMap:(id)sender;
+@property NSNumber *currentLatitude;
+@property NSNumber *currentLongitude;
+
+- (IBAction)showcurrent:(id)sender;
+- (NSString *) getDurationfrom: (Location*) origin to:(Location*) destination;
 
 @end
