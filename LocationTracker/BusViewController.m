@@ -103,8 +103,6 @@
     [arrayArduino removeAllObjects];
     [arrayLongitude removeAllObjects];
     [arrayLatitude removeAllObjects];
-    //    NSString *urlStr = [NSString stringWithFormat:@"http://itunes.apple.com/us/rss/topalbums/limit=%d/json", [number intValue]];
-    //    NSURL *url = [NSURL URLWithString:urlStr];
     
     NSURL *url = [NSURL URLWithString:@"http://asiangroup.mireene.com/locationTracker/index.php/get_newest_loc"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];

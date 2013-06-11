@@ -18,6 +18,8 @@
 @synthesize lblText = _lblText;
 @synthesize RepeatDay;
 @synthesize StopForLongTime;
+@synthesize LongTime;
+@synthesize Minutes;
 
 -(void) didDaySelection:(NSMutableArray *)selectedDay{
     NSString *objects = @"";
@@ -41,13 +43,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UIBarButtonItem *temporaryBarButtonItem=[[UIBarButtonItem alloc] init];
+    temporaryBarButtonItem.title=@"Alarm";
+    self.navigationItem.backBarButtonItem = temporaryBarButtonItem;
 }
 
 - (IBAction)savePressed:(id)sender {
-    BOOL LongTime = StopForLongTime.isOn;
+    LongTime = StopForLongTime.isOn;
     int alarm = (int)floor(_alarmTime.countDownDuration);
     NSString *strTest = [NSString stringWithFormat:@"%d", alarm];
-    
+    Minutes = [NSNumber  alarm];
     if(LongTime==YES ) _lblText.text = @"Yes";
     else _lblText.text = @"No";
         
