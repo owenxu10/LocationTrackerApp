@@ -10,6 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "Location.h"
 #import "MapViewController.h"
+#import "AlarmSettingViewController.h"
 
 @interface OperationViewController : UIViewController <CLLocationManagerDelegate>
 
@@ -22,7 +23,6 @@
 @property NSNumber *currentLatitude;
 @property NSNumber *currentLongitude;
 
-- (IBAction)showcurrent:(id)sender;
 - (NSString *) getDurationfrom: (Location*) origin to:(Location*) destination;
 
 @end

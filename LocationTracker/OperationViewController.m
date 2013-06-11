@@ -8,6 +8,7 @@
 
 #import "OperationViewController.h"
 #import "MapViewController.h"
+#import "AlarmSettingViewController.h"
 #import "Location.h"
 
 @interface OperationViewController ()
@@ -92,30 +93,16 @@
         map.Longitude =self.ReceiveLongitude.doubleValue;
         
     }
-}
-
-
-
-- (IBAction)showcurrent:(id)sender {
-    //get current location
-    locationManager = [[CLLocationManager alloc] init];
-    locationManager.delegate = self;
-    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    locationManager.distanceFilter = kCLDistanceFilterNone;
-    [locationManager startUpdatingLocation];
-    CLLocation *currentlocation = [locationManager location];
-    // Configure the new event with information from the location
-    CLLocationCoordinate2D coordinate = [currentlocation coordinate];
-    NSString *latitude = [NSString stringWithFormat:@"%f", coordinate.latitude];
-    NSString *longitude = [NSString stringWithFormat:@"%f", coordinate.longitude];
-    
-    currentLongitude = [NSNumber numberWithFloat:longitude.doubleValue];
-    currentLatitude = [NSNumber numberWithFloat:latitude.doubleValue];
-    
-    location.text =[NSString stringWithFormat:@"%f, %f",
-                    currentLatitude.doubleValue, currentLongitude.doubleValue];
+    if([[segue identifier] isEqualToString:@"SetAlarm"]){
+        AlarmSettingViewController *alarm = [segue destinationViewController];
+        alarm.title = self.title;
+    }
 
 }
+
+
+
+
 
 - (NSString *) getDurationfrom: (Location*) origin to:(Location*) destination{
     NSString *duration;

@@ -16,13 +16,18 @@
 @implementation AlarmSettingViewController
 @synthesize alarmTime = _alarmTime;
 @synthesize lblText = _lblText;
+@synthesize RepeatDay;
+@synthesize StopForLongTime;
+@synthesize LongTime;
+@synthesize Minutes;
 
 -(void) didDaySelection:(NSMutableArray *)selectedDay{
     NSString *objects = @"";
     for(id object in selectedDay){
-       objects = [NSString stringWithFormat:@"%@%@",objects,object];
+        
+       objects = [NSString stringWithFormat:@"%@,%@",objects,object];
     }
-    _lblText.text = objects;
+    RepeatDay.text = objects;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -38,11 +43,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UIBarButtonItem *temporaryBarButtonItem=[[UIBarButtonItem alloc] init];
+    temporaryBarButtonItem.title=@"Alarm";
+    self.navigationItem.backBarButtonItem = temporaryBarButtonItem;
 }
 
 - (IBAction)savePressed:(id)sender {
+    LongTime = StopForLongTime.isOn;
     int alarm = (int)floor(_alarmTime.countDownDuration);
     NSString *strTest = [NSString stringWithFormat:@"%d", alarm];
-    _lblText.text = strTest;
+    Minutes = [NSNumber  alarm];
+    if(LongTime==YES ) _lblText.text = @"Yes";
+    else _lblText.text = @"No";
+        
+   // _lblText.text = strTest;
 }
 @end
