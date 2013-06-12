@@ -41,6 +41,7 @@
 	// Do any additional setup after loading the view.
     info.text=[NSString stringWithFormat:@"%f, %f",
                ReceiveLatitude.doubleValue, ReceiveLongitude.doubleValue];
+    
     UIBarButtonItem *temporaryBarButtonItem=[[UIBarButtonItem alloc] init];
     temporaryBarButtonItem.title=@"Operation";
     self.navigationItem.backBarButtonItem = temporaryBarButtonItem;
@@ -86,6 +87,14 @@
     int seconds = [duration intValue];
     NSString *formatDuration = [calculator getFormatTime:seconds];
     self.time.text= formatDuration;
+    
+    int minutes = seconds/60;
+    int hours = minutes/60;
+    minutes = minutes - hours*60;
+    seconds = seconds - minutes *60 - hours*3600;
+    timeLeft =  [NSString stringWithFormat: @"About %d hours, %d mins and %d seconds.",hours,minutes,seconds];
+    self.time.text=timeLeft ;
+
 }
 
 - (void)didReceiveMemoryWarning
