@@ -11,7 +11,6 @@
 
 @interface AlarmSettingViewController ()
 {
-    NSMutableArray *arrayOfPerson;
     sqlite3 *alarmDB;
     NSString *dbPathString;
 }

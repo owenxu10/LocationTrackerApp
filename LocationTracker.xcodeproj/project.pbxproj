@@ -144,7 +144,6 @@
 		C35C866C17448DED0041909D = {
 			isa = PBXGroup;
 			children = (
-				025A37501768D3B000FD1618 /* libsqlite3.0.dylib */,
 				C35C867E17448DED0041909D /* LocationTracker */,
 				C35C867717448DED0041909D /* Frameworks */,
 				C35C867617448DED0041909D /* Products */,
@@ -162,6 +161,7 @@
 		C35C867717448DED0041909D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				025A37501768D3B000FD1618 /* libsqlite3.0.dylib */,
 				C3DFB9571757266600F4380F /* libc++.dylib */,
 				C3DFB9551757265F00F4380F /* GLKit.framework */,
 				C3DFB9531757265700F4380F /* SystemConfiguration.framework */,
