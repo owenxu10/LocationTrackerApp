@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "DaySettingViewController.h"
+#import "sqlite3.h"
+#import "Alarm.h"
+
 @interface AlarmSettingViewController : UIViewController <AlarmSettingDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *lblText;
 @property (weak, nonatomic) IBOutlet UIButton *btnRepeat;
@@ -17,7 +20,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *RepeatDay;
 @property BOOL LongTime;
 @property NSString *time;
+@property NSString *busname;
 @property NSNumber *Minutes;
+@property NSString *repeat;
 
 - (IBAction)savePressed:(id)sender;
 @end

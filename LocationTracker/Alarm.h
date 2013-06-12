@@ -10,4 +10,7 @@
 
 @interface Alarm : NSObject
 
+@property(nonatomic, strong)NSString *busName;
+@property(assign)int minutes;
+@property(nonatomic, strong)NSString *Repeat;
 @end

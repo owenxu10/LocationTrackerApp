@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		025A37511768D3B000FD1618 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 025A37501768D3B000FD1618 /* libsqlite3.0.dylib */; };
+		025A37541768D3E700FD1618 /* Alarm.m in Sources */ = {isa = PBXBuildFile; fileRef = 025A37531768D3E700FD1618 /* Alarm.m */; };
+		02F1B6351768C459008D609D /* AlarmDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F1B6341768C459008D609D /* AlarmDetailViewController.m */; };
 		C35C867917448DED0041909D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35C867817448DED0041909D /* UIKit.framework */; };
 		C35C867B17448DED0041909D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35C867A17448DED0041909D /* Foundation.framework */; };
 		C35C867D17448DED0041909D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35C867C17448DED0041909D /* CoreGraphics.framework */; };
@@ -49,6 +52,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		025A37501768D3B000FD1618 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		025A37521768D3E700FD1618 /* Alarm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alarm.h; sourceTree = "<group>"; };
+		025A37531768D3E700FD1618 /* Alarm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alarm.m; sourceTree = "<group>"; };
+		02F1B6331768C459008D609D /* AlarmDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmDetailViewController.h; sourceTree = "<group>"; };
+		02F1B6341768C459008D609D /* AlarmDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmDetailViewController.m; sourceTree = "<group>"; };
 		C35C867517448DED0041909D /* LocationTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C35C867817448DED0041909D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C35C867A17448DED0041909D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -109,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				025A37511768D3B000FD1618 /* libsqlite3.0.dylib in Frameworks */,
 				C3DFB9581757266600F4380F /* libc++.dylib in Frameworks */,
 				C3DFB9561757265F00F4380F /* GLKit.framework in Frameworks */,
 				C3DFB9541757265700F4380F /* SystemConfiguration.framework in Frameworks */,
@@ -135,6 +144,7 @@
 		C35C866C17448DED0041909D = {
 			isa = PBXGroup;
 			children = (
+				025A37501768D3B000FD1618 /* libsqlite3.0.dylib */,
 				C35C867E17448DED0041909D /* LocationTracker */,
 				C35C867717448DED0041909D /* Frameworks */,
 				C35C867617448DED0041909D /* Products */,
@@ -177,6 +187,8 @@
 		C35C867E17448DED0041909D /* LocationTracker */ = {
 			isa = PBXGroup;
 			children = (
+				02F1B6331768C459008D609D /* AlarmDetailViewController.h */,
+				02F1B6341768C459008D609D /* AlarmDetailViewController.m */,
 				D88D0143176628E30048694C /* OperationViewController.h */,
 				D88D0144176628E30048694C /* OperationViewController.m */,
 				D8F783141764450D00DAD800 /* AlarmSettingViewController.h */,
@@ -191,9 +203,11 @@
 				D82E2FD41762A04B004EE303 /* DurationTimeCalculator.m */,
 				C3ACDA30175BEF40009B2A37 /* BusViewController.h */,
 				C3ACDA31175BEF40009B2A37 /* BusViewController.m */,
-				C35C868817448DED0041909D /* AppDelegate.m */,
 				C35C868717448DED0041909D /* AppDelegate.h */,
+				C35C868817448DED0041909D /* AppDelegate.m */,
 				C35C869017448DED0041909D /* MainStoryboard.storyboard */,
+				025A37521768D3E700FD1618 /* Alarm.h */,
+				025A37531768D3E700FD1618 /* Alarm.m */,
 				D82E303B1762F7FF004EE303 /* DaySettingViewController.h */,
 				D82E303C1762F7FF004EE303 /* DaySettingViewController.m */,
 				C35C869317448DED0041909D /* MainViewController.h */,
@@ -315,6 +329,8 @@
 				D82E303A1762A6DD004EE303 /* MapViewController.m in Sources */,
 				D82E303D1762F7FF004EE303 /* DaySettingViewController.m in Sources */,
 				D8F783161764450D00DAD800 /* AlarmSettingViewController.m in Sources */,
+				02F1B6351768C459008D609D /* AlarmDetailViewController.m in Sources */,
+				025A37541768D3E700FD1618 /* Alarm.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
