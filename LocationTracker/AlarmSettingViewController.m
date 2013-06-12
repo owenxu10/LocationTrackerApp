@@ -140,33 +140,61 @@
     else{
        StringLongTime = @"NO";
     }
-    
+    BOOL Flag = NO;
     Minutes = [NSNumber numberWithInt:alarm];
-   
-    
     char *error;
- 
-        if (sqlite3_open([dbPathString UTF8String], &alarmDB)==SQLITE_OK) {
-            NSString *insertStmt = [NSString stringWithFormat:@"INSERT INTO ALARMS(BUSNAME,MINUTES,REPEAT,StopForLongTime) values ('%s', '%d','%s','%s')",[busname UTF8String],alarm ,[repeat UTF8String],[StringLongTime UTF8String]];
+
+    sqlite3_stmt *statement;
+    
+    if (sqlite3_open([dbPathString UTF8String], &alarmDB)==SQLITE_OK) {
+        
+        NSString *querySql = [NSString stringWithFormat:@"SELECT * FROM ALARMS"];
+        const char* query_sql = [querySql UTF8String];
+        
+        if (sqlite3_prepare(alarmDB, query_sql, -1, &statement, NULL)==SQLITE_OK) {
+            while (sqlite3_step(statement)==SQLITE_ROW) {
+                NSString *busnamedb = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 1)];
+                
+                if([busname isEqualToString:busnamedb])
+                    Flag=YES;
+            }
+        }
+        if (Flag ==YES) {
             
-            const char *insert_stmt = [insertStmt UTF8String];
+     
+        NSString *inserStmt = [NSString stringWithFormat:@"UPDATE ALARMS SET MINUTES='%d', REPEAT ='%s' ,StopForLongTime = '%s' WHERE BUSNAME = '%s' ;",alarm ,[repeat UTF8String],[StringLongTime UTF8String],[busname UTF8String]];
+             //NSLog(@"%@",inserStmt);
+            const char *insert_stmt = [inserStmt UTF8String];
             
             if (sqlite3_exec(alarmDB, insert_stmt, NULL, NULL, &error)==SQLITE_OK) {
-                NSLog(@"Alarm added");
+                NSLog(@"updated");
                 
-                //   Person *person = [[Person alloc]init];
                 
-                //   [person setName:self.nameField.text];
-                //  [person setAge:[self.ageField.text intValue]];
-                
-                // [arrayOfPerson addObject:person];
             }
-            sqlite3_close(alarmDB);
-
         }
+        else {
+            if (sqlite3_open([dbPathString UTF8String], &alarmDB)==SQLITE_OK) {
+                NSString *insertStmt = [NSString stringWithFormat:@"INSERT INTO ALARMS(BUSNAME,MINUTES,REPEAT,StopForLongTime) values ('%s', '%d','%s','%s')",[busname UTF8String],alarm ,[repeat UTF8String],[StringLongTime UTF8String]];
+                
+                const char *insert_stmt = [insertStmt UTF8String];
+                
+                if (sqlite3_exec(alarmDB, insert_stmt, NULL, NULL, &error)==SQLITE_OK) {
+                    NSLog(@"Alarm added");
+                    
+                }
+                sqlite3_close(alarmDB);
+                
+            }
+        
+        
+        
+        }
+    }
     
+    sqlite3_close(alarmDB);
 
-
-    
-}
+        
+        
+        
+    }
 @end

@@ -18,12 +18,24 @@
                                     <constraint firstAttribute="height" constant="427" id="fPM-Vl-7Uq"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" id="pti-4Q-dIp">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="qLC-vs-BVn" detailTextLabel="fJf-nr-bDb" style="IBUITableViewCellStyleSubtitle" id="pti-4Q-dIp">
                                         <rect key="frame" x="0.0" y="46" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLC-vs-BVn">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJf-nr-bDb">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -378,6 +390,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <barButtonItem key="rightBarButtonItem" title="Save" id="TSj-JO-JR1">
                             <connections>
                                 <action selector="savePressed:" destination="SlD-Lz-fDK" id="qrk-CG-S7p"/>
+                                <segue destination="2" kind="custom" id="svs-6u-dvN"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -393,7 +406,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rmf-dz-y44" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3173" y="192"/>
+            <point key="canvasLocation" x="1374" y="-572"/>
         </scene>
         <!--Day Setting View Controller-->
         <scene sceneID="lFS-JC-Nui">
@@ -588,7 +601,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XEB-bs-TrO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3675" y="192"/>
+            <point key="canvasLocation" x="3251" y="-1766"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="OWV-1C-rse">
@@ -688,11 +701,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <constraint firstItem="Asp-va-NJg" firstAttribute="trailing" secondItem="7" secondAttribute="trailing" type="default" id="0YR-2l-9nY"/>
                             <constraint firstItem="Asp-va-NJg" firstAttribute="leading" secondItem="7" secondAttribute="leading" type="default" id="CBh-zp-fdw"/>
                             <constraint firstItem="Asp-va-NJg" firstAttribute="bottom" secondItem="7" secondAttribute="bottom" type="default" id="Pa0-iF-45x"/>
+                            <constraint firstItem="AAv-fI-Mc8" firstAttribute="top" secondItem="7" secondAttribute="top" constant="179" id="TAS-mM-ey0"/>
                             <constraint firstItem="Asp-va-NJg" firstAttribute="top" secondItem="7" secondAttribute="top" type="default" id="e1N-Zl-5gY"/>
                             <constraint firstItem="12" firstAttribute="leading" secondItem="7" secondAttribute="leading" type="default" id="kyL-VC-rMY"/>
                             <constraint firstItem="12" firstAttribute="top" secondItem="7" secondAttribute="top" type="default" id="oQ7-QK-1Ab"/>
                             <constraint firstItem="AAv-fI-Mc8" firstAttribute="centerX" secondItem="12" secondAttribute="centerX" type="default" id="vcj-9J-mJJ"/>
-                            <constraint firstItem="AAv-fI-Mc8" firstAttribute="top" secondItem="7" secondAttribute="top" constant="181" id="xfs-uI-Wj2"/>
                             <constraint firstItem="12" firstAttribute="trailing" secondItem="7" secondAttribute="trailing" type="default" id="yf5-Bx-wHg"/>
                         </constraints>
                     </view>
@@ -785,4 +798,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="svs-6u-dvN"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -16,8 +16,11 @@
 
 - (void)viewDidLoad
 {
+    
     [super viewDidLoad];
+    
     [self.navigationController setNavigationBarHidden:NO];
+    self.navigationItem.hidesBackButton = YES;
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.title = @"Location Tracker";
     UIBarButtonItem *temporaryBarButtonItem=[[UIBarButtonItem alloc] init];
