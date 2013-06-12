@@ -22,6 +22,7 @@
 @property NSNumber *ReceiveLongitude;
 @property NSNumber *currentLatitude;
 @property NSNumber *currentLongitude;
+@property NSString *timeLeft;
 
 - (NSString *) getDurationfrom: (Location*) origin to:(Location*) destination;
 
