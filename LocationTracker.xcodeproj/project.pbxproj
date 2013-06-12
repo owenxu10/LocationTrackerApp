@@ -35,9 +35,10 @@
 		C3DFB9541757265700F4380F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DFB9531757265700F4380F /* SystemConfiguration.framework */; };
 		C3DFB9561757265F00F4380F /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DFB9551757265F00F4380F /* GLKit.framework */; };
 		C3DFB9581757266600F4380F /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DFB9571757266600F4380F /* libc++.dylib */; };
+		D80466CC1767EBAA007987D9 /* tracker.png in Resources */ = {isa = PBXBuildFile; fileRef = D80466CB1767EBAA007987D9 /* tracker.png */; };
+		D80466CE1767EECF007987D9 /* caricon.png in Resources */ = {isa = PBXBuildFile; fileRef = D80466CD1767EECF007987D9 /* caricon.png */; };
 		D82E2FD61762A161004EE303 /* Backgrounds1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D82E2FD51762A161004EE303 /* Backgrounds1.jpg */; };
 		D82E2FD81762A17E004EE303 /* S4BClient_1024 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = D82E2FD71762A17E004EE303 /* S4BClient_1024 copy.png */; };
-		D82E2FDA1762A1A7004EE303 /* caricon copy.png in Resources */ = {isa = PBXBuildFile; fileRef = D82E2FD91762A1A7004EE303 /* caricon copy.png */; };
 		D82E2FE31762A3C1004EE303 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = D82E2FE21762A3C1004EE303 /* Location.m */; };
 		D82E2FE91762A429004EE303 /* LocationTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82E2FE81762A429004EE303 /* LocationTimerViewController.m */; };
 		D82E30371762A6AF004EE303 /* DurationTimeCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = D82E2FD41762A04B004EE303 /* DurationTimeCalculator.m */; };
@@ -83,11 +84,12 @@
 		C3DFB9531757265700F4380F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C3DFB9551757265F00F4380F /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		C3DFB9571757266600F4380F /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		D80466CB1767EBAA007987D9 /* tracker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tracker.png; path = LocationTracker/tracker.png; sourceTree = "<group>"; };
+		D80466CD1767EECF007987D9 /* caricon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = caricon.png; path = LocationTracker/caricon.png; sourceTree = "<group>"; };
 		D82E2FD31762A04B004EE303 /* DurationTimeCalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DurationTimeCalculator.h; sourceTree = "<group>"; };
 		D82E2FD41762A04B004EE303 /* DurationTimeCalculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DurationTimeCalculator.m; sourceTree = "<group>"; };
 		D82E2FD51762A161004EE303 /* Backgrounds1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Backgrounds1.jpg; path = LocationTracker/Backgrounds1.jpg; sourceTree = "<group>"; };
 		D82E2FD71762A17E004EE303 /* S4BClient_1024 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "S4BClient_1024 copy.png"; path = "LocationTracker/S4BClient_1024 copy.png"; sourceTree = "<group>"; };
-		D82E2FD91762A1A7004EE303 /* caricon copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "caricon copy.png"; path = "LocationTracker/caricon copy.png"; sourceTree = "<group>"; };
 		D82E2FE11762A3C1004EE303 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		D82E2FE21762A3C1004EE303 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		D82E2FE71762A429004EE303 /* LocationTimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationTimerViewController.h; sourceTree = "<group>"; };
@@ -221,7 +223,8 @@
 		C35C869E17449C230041909D /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				D82E2FD91762A1A7004EE303 /* caricon copy.png */,
+				D80466CD1767EECF007987D9 /* caricon.png */,
+				D80466CB1767EBAA007987D9 /* tracker.png */,
 				D82E2FD71762A17E004EE303 /* S4BClient_1024 copy.png */,
 				D82E2FD51762A161004EE303 /* Backgrounds1.jpg */,
 			);
@@ -288,7 +291,8 @@
 				C3BD64621757286500B0CC40 /* GoogleMaps.bundle in Resources */,
 				D82E2FD61762A161004EE303 /* Backgrounds1.jpg in Resources */,
 				D82E2FD81762A17E004EE303 /* S4BClient_1024 copy.png in Resources */,
-				D82E2FDA1762A1A7004EE303 /* caricon copy.png in Resources */,
+				D80466CC1767EBAA007987D9 /* tracker.png in Resources */,
+				D80466CE1767EECF007987D9 /* caricon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

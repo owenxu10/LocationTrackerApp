@@ -73,8 +73,18 @@
     Location *destination = [[Location alloc]init];
     [destination setLatitude:ReceiveLatitude.doubleValue];
     [destination setLongitude:ReceiveLongitude.doubleValue];
-    NSString *duration=[self getDurationfrom:origin to:destination];
-    self.time.text=  duration;
+    
+    DurationTimeCalculator *calculator = [[DurationTimeCalculator alloc]init];
+    
+    NSString *startAddress = [calculator getStartAddressFrom:origin To:destination];
+    NSString *endAddress = [calculator getEndAddressFrom:origin To:destination];
+    info.text = startAddress;
+    location.text = endAddress;
+    
+    NSString *duration=[calculator getDurationfrom:origin to:destination];
+    int seconds = [duration intValue];
+    NSString *formatDuration = [calculator getFormatTime:seconds];
+    self.time.text= formatDuration;
 
 }
 
@@ -98,34 +108,6 @@
         alarm.title = self.title;
     }
 
-}
-
-
-
-
-
-- (NSString *) getDurationfrom: (Location*) origin to:(Location*) destination{
-    NSString *duration;
-    NSString *from=[NSString stringWithFormat:@"%f,%f",[origin latitude],[origin longitude]];
-    NSString *to=[NSString stringWithFormat:@"%f,%f",[destination latitude],[destination longitude]];
-    
-    NSString *web_url = [NSString stringWithFormat:@"http://maps.googleapis.com/maps/api/directions/json?origin=%@&destination=%@&sensor=false&mode=driving", from, to];
-    //NSLog(@"%@", web_url);
-    NSURL *final_Url = [NSURL URLWithString:web_url];
-    NSData *data = [NSData dataWithContentsOfURL:final_Url];
-    NSError *error;
-    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-    NSDictionary *routes = [json objectForKey:@"routes"];
-    
-    for(NSDictionary *route in routes){
-        NSDictionary *legs = [route objectForKey:@"legs"];
-        for(NSDictionary *leg in legs){
-            NSArray *response_array = [[leg objectForKey:@"duration"] objectForKey:@"value"];
-            duration =  [NSString stringWithFormat:@"%@", response_array];
-        }
-    }
-    return duration;
-    
 }
 
 

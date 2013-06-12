@@ -14,4 +14,7 @@
 
 - (IBAction)btn_pressed:(id)sender;
 - (NSString *) getDurationfrom: (Location*) origin to:(Location*) destination;
+- (NSString *) getStartAddressFrom:(Location*) origin To:(Location*) destination;
+- (NSString *) getEndAddressFrom:(Location*) origin To:(Location*) destination;
+- (NSString *) getFormatTime:(int) seconds;
 @end

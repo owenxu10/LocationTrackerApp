@@ -11,6 +11,7 @@
 #import "Location.h"
 #import "MapViewController.h"
 #import "AlarmSettingViewController.h"
+#import "DurationTimeCalculator.h"
 
 @interface OperationViewController : UIViewController <CLLocationManagerDelegate>
 
@@ -22,7 +23,5 @@
 @property NSNumber *ReceiveLongitude;
 @property NSNumber *currentLatitude;
 @property NSNumber *currentLongitude;
-
-- (NSString *) getDurationfrom: (Location*) origin to:(Location*) destination;
 
 @end
