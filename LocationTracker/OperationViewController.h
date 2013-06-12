@@ -23,5 +23,6 @@
 @property NSNumber *ReceiveLongitude;
 @property NSNumber *currentLatitude;
 @property NSNumber *currentLongitude;
+@property NSString *timeLeft;
 
 @end

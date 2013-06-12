@@ -24,6 +24,7 @@
 @synthesize currentLatitude;
 @synthesize currentLongitude;
 @synthesize time;
+@synthesize timeLeft;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -73,6 +74,7 @@
     Location *destination = [[Location alloc]init];
     [destination setLatitude:ReceiveLatitude.doubleValue];
     [destination setLongitude:ReceiveLongitude.doubleValue];
+<<<<<<< HEAD
     
     DurationTimeCalculator *calculator = [[DurationTimeCalculator alloc]init];
     
@@ -85,6 +87,16 @@
     int seconds = [duration intValue];
     NSString *formatDuration = [calculator getFormatTime:seconds];
     self.time.text= formatDuration;
+=======
+    NSString *duration=[self getDurationfrom:origin to:destination];
+    int seconds = duration.intValue;
+    int minutes = seconds/60;
+    int hours = minutes/60;
+    minutes = minutes - hours*60;
+    seconds = seconds - minutes *60 - hours*3600;
+    timeLeft =  [NSString stringWithFormat: @"About %d hours, %d mins and %d seconds.",hours,minutes,seconds];
+    self.time.text=timeLeft ;
+>>>>>>> b281de67f2da50837a9d1b0ff86f746138453b5a
 
 }
 
@@ -106,6 +118,7 @@
     if([[segue identifier] isEqualToString:@"SetAlarm"]){
         AlarmSettingViewController *alarm = [segue destinationViewController];
         alarm.title = self.title;
+        alarm.time = timeLeft;
     }
 
 }

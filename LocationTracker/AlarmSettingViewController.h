@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UISwitch *StopForLongTime;
 @property (weak, nonatomic) IBOutlet UILabel *RepeatDay;
 @property BOOL LongTime;
+@property NSString *time;
 @property NSNumber *Minutes;
 
 - (IBAction)savePressed:(id)sender;
