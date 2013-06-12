@@ -52,7 +52,7 @@
     LongTime = StopForLongTime.isOn;
     int alarm = (int)floor(_alarmTime.countDownDuration);
     NSString *strTest = [NSString stringWithFormat:@"%d", alarm];
-    Minutes = [NSNumber  alarm];
+    //Minutes = [NSNumber alarm];
     if(LongTime==YES ) _lblText.text = @"Yes";
     else _lblText.text = @"No";
         
