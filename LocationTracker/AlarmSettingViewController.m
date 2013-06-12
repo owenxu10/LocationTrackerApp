@@ -100,10 +100,19 @@
 - (IBAction)savePressed:(id)sender {
     LongTime = StopForLongTime.isOn;
     int alarm = (int)floor(_alarmTime.countDownDuration);
+<<<<<<< HEAD
     
     Minutes = [NSNumber numberWithInt:alarm];
     
     
     
+=======
+    NSString *strTest = [NSString stringWithFormat:@"%d", alarm];
+    //Minutes = [NSNumber alarm];
+    if(LongTime==YES ) _lblText.text = @"Yes";
+    else _lblText.text = @"No";
+        
+   // _lblText.text = strTest;
+>>>>>>> 45544f072ba864dbd075b63fac98fbd3dc4343ad
 }
 @end
