@@ -75,7 +75,6 @@
     Location *destination = [[Location alloc]init];
     [destination setLatitude:ReceiveLatitude.doubleValue];
     [destination setLongitude:ReceiveLongitude.doubleValue];
-
     
     DurationTimeCalculator *calculator = [[DurationTimeCalculator alloc]init];
     
@@ -86,15 +85,14 @@
     
     NSString *duration=[calculator getDurationfrom:origin to:destination];
     int seconds = [duration intValue];
+        if(seconds == 0){
+         self.time.text = @"Waiting for the result.";
+        return;
+    }
     NSString *formatDuration = [calculator getFormatTime:seconds];
-    self.time.text= formatDuration;
-
-    int minutes = seconds/60;
-    int hours = minutes/60;
-    minutes = minutes - hours*60;
-    seconds = seconds - minutes *60 - hours*3600;
-    timeLeft =  [NSString stringWithFormat: @"About %d hours, %d mins and %d seconds.",hours,minutes,seconds];
+    timeLeft = formatDuration;
     self.time.text=timeLeft ;
+    [self.view setNeedsDisplay];
 
 }
 

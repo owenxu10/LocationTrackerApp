@@ -18,7 +18,7 @@
                                     <constraint firstAttribute="height" constant="427" id="fPM-Vl-7Uq"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="qLC-vs-BVn" detailTextLabel="fJf-nr-bDb" style="IBUITableViewCellStyleSubtitle" id="pti-4Q-dIp">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="qLC-vs-BVn" detailTextLabel="fJf-nr-bDb" style="IBUITableViewCellStyleSubtitle" id="pti-4Q-dIp">
                                         <rect key="frame" x="0.0" y="46" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -40,7 +40,7 @@
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <segue destination="dyl-uD-EYk" kind="push" identifier="operation" id="jwn-WH-HxK"/>
+                                            <segue destination="dyl-uD-EYk" kind="push" identifier="Operation" id="T6f-V6-Nxh"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

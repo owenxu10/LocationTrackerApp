@@ -13,6 +13,4 @@
 @property (weak, nonatomic) IBOutlet UITableView *showAllBus;
 - (IBAction)refresh:(id)sender;
 
-
-
 @end

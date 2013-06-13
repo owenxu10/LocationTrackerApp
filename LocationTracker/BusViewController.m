@@ -156,7 +156,7 @@
     SendLatitude = [arrayLatitude objectAtIndex:indexPath.row];
     SendLongitude = [arrayLongitude objectAtIndex:indexPath.row];
     
-    //[self performSegueWithIdentifier:@"operation" sender:self];
+    [self performSegueWithIdentifier:@"Operation" sender:self];
     
 
    // OperationViewController *operation = [[OperationViewController alloc] init];
@@ -169,7 +169,7 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([[segue identifier] isEqualToString:@"operation"]){
+    if([[segue identifier] isEqualToString:@"Operation"]){
         OperationViewController *operation = [segue destinationViewController];
         operation.title=busname;
         operation.ReceiveLatitude= SendLatitude;
