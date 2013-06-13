@@ -13,6 +13,7 @@
 #import "AlarmSettingViewController.h"
 #import "DurationTimeCalculator.h"
 
+
 @interface OperationViewController : UIViewController <CLLocationManagerDelegate>
 
 @property (retain, nonatomic) CLLocationManager *locationManager;
