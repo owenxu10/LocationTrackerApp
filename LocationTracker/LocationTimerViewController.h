@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "sqlite3.h"
 
 @interface LocationTimerViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *btn_get;
