@@ -48,6 +48,8 @@
 		D82E303A1762A6DD004EE303 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82E30391762A6DD004EE303 /* MapViewController.m */; };
 		D82E303D1762F7FF004EE303 /* DaySettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82E303C1762F7FF004EE303 /* DaySettingViewController.m */; };
 		D88D0145176628F70048694C /* OperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D88D0144176628E30048694C /* OperationViewController.m */; };
+		D8A291EF1769A12C00FE8FC0 /* bg_alarm.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8A291EE1769A12C00FE8FC0 /* bg_alarm.jpg */; };
+		D8A291F11769A32900FE8FC0 /* btn.png in Resources */ = {isa = PBXBuildFile; fileRef = D8A291F01769A32900FE8FC0 /* btn.png */; };
 		D8F783161764450D00DAD800 /* AlarmSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F783151764450D00DAD800 /* AlarmSettingViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +110,8 @@
 		D82E303C1762F7FF004EE303 /* DaySettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaySettingViewController.m; sourceTree = "<group>"; };
 		D88D0143176628E30048694C /* OperationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperationViewController.h; sourceTree = "<group>"; };
 		D88D0144176628E30048694C /* OperationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OperationViewController.m; sourceTree = "<group>"; };
+		D8A291EE1769A12C00FE8FC0 /* bg_alarm.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bg_alarm.jpg; path = LocationTracker/bg_alarm.jpg; sourceTree = "<group>"; };
+		D8A291F01769A32900FE8FC0 /* btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn.png; path = LocationTracker/btn.png; sourceTree = "<group>"; };
 		D8F783141764450D00DAD800 /* AlarmSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmSettingViewController.h; sourceTree = "<group>"; };
 		D8F783151764450D00DAD800 /* AlarmSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmSettingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -237,6 +241,8 @@
 		C35C869E17449C230041909D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D8A291F01769A32900FE8FC0 /* btn.png */,
+				D8A291EE1769A12C00FE8FC0 /* bg_alarm.jpg */,
 				D80466CD1767EECF007987D9 /* caricon.png */,
 				D80466CB1767EBAA007987D9 /* tracker.png */,
 				D82E2FD71762A17E004EE303 /* S4BClient_1024 copy.png */,
@@ -307,6 +313,8 @@
 				D82E2FD81762A17E004EE303 /* S4BClient_1024 copy.png in Resources */,
 				D80466CC1767EBAA007987D9 /* tracker.png in Resources */,
 				D80466CE1767EECF007987D9 /* caricon.png in Resources */,
+				D8A291EF1769A12C00FE8FC0 /* bg_alarm.jpg in Resources */,
+				D8A291F11769A32900FE8FC0 /* btn.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
