@@ -29,6 +29,7 @@
     int lend;
     int lnum;
     int sec;
+    int send;
 }
 
 @end
@@ -55,15 +56,12 @@
     lnot = 1;
     lend = 1;
     sec = 0;
-    arrayOfSAlarm = [[NSMutableArray alloc]init];
-    arrayOfLAlarm = [[NSMutableArray alloc]init];
-    arrayOfTAlarm = [[NSMutableArray alloc]init];
-    
+    send =1;
     arrayArduino = [[NSMutableArray alloc]init];
     arrayLongitude= [[NSMutableArray alloc]init];
     arrayLatitude= [[NSMutableArray alloc]init];
     [self getDataFromDB];
-    //[NSTimer scheduledTimerWithTimeInterval: 5 target: self selector: @selector(scheduledSpy:) userInfo: nil repeats: YES];
+    [NSTimer scheduledTimerWithTimeInterval: 1 target: self selector: @selector(scheduledSpy:) userInfo: nil repeats: YES];
     [NSTimer scheduledTimerWithTimeInterval: 5 target: self selector: @selector(longTimeSpy:) userInfo: nil repeats: YES];
     //[NSTimer scheduledTimerWithTimeInterval: 20  target: self selector: @selector(todaySpy:) userInfo: nil repeats: YES];
     
@@ -243,33 +241,9 @@
     comps = [calendar components:unitFlags fromDate:now];
     int week = [comps weekday];
     NSLog(@"%d",week);
-    /*
-     Location *origin = [[Location alloc]init];
-     [origin setLatitude:43.01318000000001];
-     [origin setLongitude:-83.71310000000001];
-     
-     Location *destination = [[Location alloc]init];
-     [destination setLatitude:45.50987000000001];
-     [destination setLongitude:-73.553770];
-     
-     DurationTimeCalculator *calculator = [[DurationTimeCalculator alloc] init];
-     NSString *duration=[calculator getDurationfrom:origin to:destination];
-     
-     NSMutableString *result=[[NSMutableString alloc]init];
-     [result appendString:self.txt_show.text];
-     NSLog(@"%@", duration);
-     [result appendString:duration];
-     self.txt_show.text = result;
-     
-     
-     
-     UILocalNotification* localNotification = [[UILocalNotification alloc] init];
-     localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:60];
-     localNotification.alertBody = @"Your alert message";
-     localNotification.timeZone = [NSTimeZone defaultTimeZone];
-     [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
-     */
-    
+    send--;
+    NSLog(@"%d",send);
+     if(send ==0 ){
     UILocalNotification *notification=[[UILocalNotification alloc] init];
     if (notification!=nil) {
         NSDate *now=[NSDate new];
@@ -279,11 +253,13 @@
         notification.applicationIconBadgeNumber+=1; //应用的红色数字
         notification.soundName= UILocalNotificationDefaultSoundName;//声音，可以换成alarm.soundName = @"myMusic.caf"
         //去掉下面2行就不会弹出提示框
-        notification.alertBody=@"Alarm ";
+        notification.alertBody=@"Alarm";
         notification.alertAction = @"Open";
         //notification.hasAction = NO; //是否显示额外的按钮，为no时alertAction消失// NSDictionary *infoDict = [NSDictionary dictionaryWithObject:@"someValue" forKey:@"someKey"];
         //notification.userInfo = infoDict; //添加额外的信息
         [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+        send=0;
+    }
     }
 }
 
