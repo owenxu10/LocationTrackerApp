@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hvT-k3-oKK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3103" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hvT-k3-oKK">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -77,10 +77,19 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bg_alarm.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Yxr-iK-JqL">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="417" id="Doj-Oh-o73"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXV-Yf-nzq">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="F76-lL-xUe"/>
+                                    <constraint firstAttribute="width" constant="124" id="laJ-dW-IoQ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Show On Map">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Show On Map" backgroundImage="btn.png">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -95,8 +104,8 @@
                                     <constraint firstAttribute="width" constant="124" id="MvB-Gu-ZiF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Set Alarm">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Set Alarm" backgroundImage="btn.png">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -106,46 +115,48 @@
                                     <segue destination="SlD-Lz-fDK" kind="push" identifier="SetAlarm" id="voc-bh-yJO"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="Z5H-uu-arx">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="216" translatesAutoresizingMaskIntoConstraints="NO" id="Z5H-uu-arx">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="nX8-iC-I55"/>
+                                    <constraint firstAttribute="height" constant="62" id="er4-Ph-aWo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="4pp-en-GA6">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="216" translatesAutoresizingMaskIntoConstraints="NO" id="4pp-en-GA6">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="SJa-Eb-km7"/>
+                                    <constraint firstAttribute="height" constant="65" id="mv9-I4-Nv0"/>
+                                    <constraint firstAttribute="width" constant="216" id="oos-ee-mpJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="P3X-Vi-w2k">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="236" translatesAutoresizingMaskIntoConstraints="NO" id="P3X-Vi-w2k">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="Edv-py-kBb"/>
+                                    <constraint firstAttribute="height" constant="31" id="LZN-7q-Jle"/>
+                                    <constraint firstAttribute="width" constant="236" id="uLv-yD-Bb7"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4pp-en-GA6" firstAttribute="top" secondItem="lby-ZY-2rr" secondAttribute="top" constant="84" id="BYc-FQ-Ux4"/>
-                            <constraint firstAttribute="trailing" secondItem="4pp-en-GA6" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="EWY-EJ-PLV"/>
-                            <constraint firstItem="Z5H-uu-arx" firstAttribute="top" secondItem="4pp-en-GA6" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="IIC-9h-kGz"/>
-                            <constraint firstAttribute="trailing" secondItem="kf8-o9-RjO" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="OJN-II-uN8"/>
-                            <constraint firstAttribute="trailing" secondItem="Z5H-uu-arx" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="YTd-Qw-eEZ"/>
-                            <constraint firstItem="P3X-Vi-w2k" firstAttribute="top" secondItem="lby-ZY-2rr" secondAttribute="top" constant="229" id="dH9-8R-gD3"/>
-                            <constraint firstAttribute="trailing" secondItem="P3X-Vi-w2k" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="kx6-6q-S7c"/>
-                            <constraint firstItem="fXV-Yf-nzq" firstAttribute="leading" secondItem="lby-ZY-2rr" secondAttribute="leading" constant="25" id="m0f-Fu-fET"/>
-                            <constraint firstItem="Z5H-uu-arx" firstAttribute="leading" secondItem="lby-ZY-2rr" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="nGJ-iW-TQn"/>
-                            <constraint firstItem="kf8-o9-RjO" firstAttribute="baseline" secondItem="fXV-Yf-nzq" secondAttribute="baseline" type="default" id="qUK-fZ-dhn"/>
-                            <constraint firstItem="P3X-Vi-w2k" firstAttribute="leading" secondItem="lby-ZY-2rr" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="rQv-6D-HuM"/>
-                            <constraint firstAttribute="bottom" secondItem="fXV-Yf-nzq" secondAttribute="bottom" constant="74" id="wmu-dd-bxz"/>
-                            <constraint firstItem="4pp-en-GA6" firstAttribute="leading" secondItem="lby-ZY-2rr" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="xvd-06-Mgu"/>
+                            <constraint firstItem="fXV-Yf-nzq" firstAttribute="leading" secondItem="lby-ZY-2rr" secondAttribute="leading" constant="35" id="1Ij-4a-sAt"/>
+                            <constraint firstItem="Yxr-iK-JqL" firstAttribute="trailing" secondItem="lby-ZY-2rr" secondAttribute="trailing" type="default" id="5Oh-eC-eO2"/>
+                            <constraint firstItem="P3X-Vi-w2k" firstAttribute="leading" secondItem="lby-ZY-2rr" secondAttribute="leading" constant="48" id="DjE-7B-2Rb"/>
+                            <constraint firstItem="kf8-o9-RjO" firstAttribute="bottom" secondItem="fXV-Yf-nzq" secondAttribute="bottom" type="default" id="J7p-sT-FVJ"/>
+                            <constraint firstItem="4pp-en-GA6" firstAttribute="trailing" secondItem="Z5H-uu-arx" secondAttribute="trailing" type="default" id="JXb-Go-4NR"/>
+                            <constraint firstItem="Z5H-uu-arx" firstAttribute="leading" secondItem="4pp-en-GA6" secondAttribute="leading" type="default" id="Lv1-Pn-we3"/>
+                            <constraint firstItem="4pp-en-GA6" firstAttribute="leading" secondItem="lby-ZY-2rr" secondAttribute="leading" constant="54" id="Sgc-y0-p90"/>
+                            <constraint firstItem="4pp-en-GA6" firstAttribute="top" secondItem="lby-ZY-2rr" secondAttribute="top" constant="113" id="bnY-1t-sS3"/>
+                            <constraint firstItem="Yxr-iK-JqL" firstAttribute="leading" secondItem="lby-ZY-2rr" secondAttribute="leading" type="default" id="iKy-Zy-axC"/>
+                            <constraint firstItem="Yxr-iK-JqL" firstAttribute="bottom" secondItem="lby-ZY-2rr" secondAttribute="bottom" type="default" id="l52-3r-zQc"/>
+                            <constraint firstItem="Z5H-uu-arx" firstAttribute="top" secondItem="lby-ZY-2rr" secondAttribute="top" constant="212" id="qiq-Vs-J4Y"/>
+                            <constraint firstItem="kf8-o9-RjO" firstAttribute="leading" secondItem="fXV-Yf-nzq" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="sJh-G1-V4Q"/>
+                            <constraint firstAttribute="bottom" secondItem="P3X-Vi-w2k" secondAttribute="bottom" constant="111" id="te6-e3-Ja4"/>
+                            <constraint firstItem="fXV-Yf-nzq" firstAttribute="top" secondItem="kf8-o9-RjO" secondAttribute="top" type="default" id="vcK-y4-jIR"/>
+                            <constraint firstAttribute="bottom" secondItem="fXV-Yf-nzq" secondAttribute="bottom" constant="42" id="yMf-Ml-4PX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="N7u-tg-jr9"/>
@@ -195,7 +206,7 @@
                                     <segue destination="6" kind="modal" identifier="showAlternate" modalTransitionStyle="flipHorizontal" id="11"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" alpha="0.70000000000000007" contentMode="scaleToFill" image="Backgrounds1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="eiO-RU-QQO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Backgrounds1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="eiO-RU-QQO">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="467" id="DaV-SZ-Vlx"/>
                                     <constraint firstAttribute="width" constant="336" id="gWU-UQ-QVq"/>
@@ -733,6 +744,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     </scenes>
     <resources>
         <image name="Backgrounds1.jpg" width="972" height="1200"/>
+        <image name="bg_alarm.jpg" width="480" height="720"/>
+        <image name="btn.png" width="223" height="60"/>
         <image name="caricon.png" width="250" height="122"/>
     </resources>
     <classes>

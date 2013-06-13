@@ -63,6 +63,26 @@
     return arrayOfAlarm.count;
 }
 
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        Alarm *alarm = [arrayOfAlarm objectAtIndex:indexPath.row];
+        [self deleteData:[NSString stringWithFormat:@"Delete from ALARMS where BUSNAME is '%s'", [alarm.busName UTF8String]]];
+        [arrayOfAlarm removeObjectAtIndex:indexPath.row];
+        
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+}
+
+-(void)deleteData:(NSString *)deleteQuery
+{
+    char *error;
+    
+    if (sqlite3_exec(alarmDB, [deleteQuery UTF8String], NULL, NULL, &error)==SQLITE_OK) {
+        NSLog(@"Alarm deleted");
+    }
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
