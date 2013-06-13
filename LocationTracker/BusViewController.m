@@ -21,8 +21,6 @@
     NSNumber *SendLatitude;
 
 }
-
-
 @end
 
 @implementation BusViewController
@@ -176,9 +174,7 @@
         operation.title=busname;
         operation.ReceiveLatitude= SendLatitude;
         operation.ReceiveLongitude= SendLongitude;
-       
-
-}
+       }
 }
 
 

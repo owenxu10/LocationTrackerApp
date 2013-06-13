@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hvT-k3-oKK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3103" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hvT-k3-oKK">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -38,7 +38,7 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <segue destination="dyl-uD-EYk" kind="push" identifier="operation" id="jwn-WH-HxK"/>
                                         </connections>
@@ -122,7 +122,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="P3X-Vi-w2k">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="P3X-Vi-w2k">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Edv-py-kBb"/>
                                 </constraints>
@@ -135,10 +135,10 @@
                         <constraints>
                             <constraint firstItem="4pp-en-GA6" firstAttribute="top" secondItem="lby-ZY-2rr" secondAttribute="top" constant="84" id="BYc-FQ-Ux4"/>
                             <constraint firstAttribute="trailing" secondItem="4pp-en-GA6" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="EWY-EJ-PLV"/>
-                            <constraint firstItem="P3X-Vi-w2k" firstAttribute="top" secondItem="Z5H-uu-arx" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="H05-MG-Ayf"/>
                             <constraint firstItem="Z5H-uu-arx" firstAttribute="top" secondItem="4pp-en-GA6" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="IIC-9h-kGz"/>
                             <constraint firstAttribute="trailing" secondItem="kf8-o9-RjO" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="OJN-II-uN8"/>
                             <constraint firstAttribute="trailing" secondItem="Z5H-uu-arx" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="YTd-Qw-eEZ"/>
+                            <constraint firstItem="P3X-Vi-w2k" firstAttribute="top" secondItem="lby-ZY-2rr" secondAttribute="top" constant="229" id="dH9-8R-gD3"/>
                             <constraint firstAttribute="trailing" secondItem="P3X-Vi-w2k" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="kx6-6q-S7c"/>
                             <constraint firstItem="fXV-Yf-nzq" firstAttribute="leading" secondItem="lby-ZY-2rr" secondAttribute="leading" constant="25" id="m0f-Fu-fET"/>
                             <constraint firstItem="Z5H-uu-arx" firstAttribute="leading" secondItem="lby-ZY-2rr" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="nGJ-iW-TQn"/>
@@ -613,7 +613,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XEB-bs-TrO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3251" y="-1766"/>
+            <point key="canvasLocation" x="2172" y="-1102"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="OWV-1C-rse">
@@ -750,61 +750,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="Backgrounds1.jpg" width="972" height="1200"/>
         <image name="caricon.png" width="250" height="122"/>
     </resources>
-    <classes>
-        <class className="AlarmSettingViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AlarmSettingViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="savePressed:"/>
-                <relationship kind="outlet" name="RepeatDay" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="StopForLongTime" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="alarmTime" candidateClass="UIDatePicker"/>
-                <relationship kind="outlet" name="btnRepeat" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btnSave" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="lblText" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="BusViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BusViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="refresh:"/>
-                <relationship kind="outlet" name="showAllBus" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="DaySettingViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DaySettingViewController.h"/>
-        </class>
-        <class className="FlipsideViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FlipsideViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="done:"/>
-            </relationships>
-        </class>
-        <class className="LocationTimerViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationTimerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="btn_pressed:"/>
-                <relationship kind="outlet" name="btn_get" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="txt_show" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="MainViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
-        </class>
-        <class className="MapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="OperationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/OperationViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="info" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="location" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="time" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -86,13 +86,8 @@
     NSString *duration=[calculator getDurationfrom:origin to:destination];
     int seconds = [duration intValue];
     NSString *formatDuration = [calculator getFormatTime:seconds];
-    self.time.text= formatDuration;
-    
-    int minutes = seconds/60;
-    int hours = minutes/60;
-    minutes = minutes - hours*60;
-    seconds = seconds - minutes *60 - hours*3600;
-    timeLeft =  [NSString stringWithFormat: @"About %d hours, %d mins and %d seconds.",hours,minutes,seconds];
+    self.time.text= formatDuration;   
+    timeLeft =  formatDuration;
     self.time.text=timeLeft ;
 
 }
