@@ -157,7 +157,6 @@
     SendLongitude = [arrayLongitude objectAtIndex:indexPath.row];
     
     [self performSegueWithIdentifier:@"Operation" sender:self];
-    
 
    // OperationViewController *operation = [[OperationViewController alloc] init];
     //map.busname =[arrayArduino objectAtIndex:indexPath.row];

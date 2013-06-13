@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AlarmListViewController.h"
-         timestampString = "392742314.730803"
+         timestampString = "392790976.672362"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "11"
-         endingLineNumber = "11"
+         startingLineNumber = "14"
+         endingLineNumber = "14"
          landmarkName = "@interface AlarmListViewController"
          landmarkType = "2">
       </FileBreakpoint>
@@ -34,12 +34,38 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "LocationTracker/AlarmSettingViewController.m"
-         timestampString = "392763283.891076"
+         timestampString = "392786898.581739"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "155"
-         endingLineNumber = "155"
-         landmarkName = "-savePressed:"
+         startingLineNumber = "159"
+         endingLineNumber = "159"
+         landmarkName = "-prepareForSegue:sender:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "LocationTracker/AlarmSettingViewController.m"
+         timestampString = "392786818.267678"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "124"
+         endingLineNumber = "124"
+         landmarkName = "-prepareForSegue:sender:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "AlarmListViewController.m"
+         timestampString = "392792865.646388"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "136"
+         endingLineNumber = "136"
+         landmarkName = "-GetDataFromDB"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

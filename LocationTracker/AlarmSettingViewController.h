@@ -24,5 +24,5 @@
 @property NSNumber *Minutes;
 @property NSString *repeat;
 
-- (IBAction)savePressed:(id)sender;
+
 @end

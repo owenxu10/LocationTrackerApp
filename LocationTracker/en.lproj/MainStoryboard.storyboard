@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3103" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hvT-k3-oKK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hvT-k3-oKK">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -240,7 +240,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="fBh-h9-dP2" kind="push" id="Bk6-J5-qMY"/>
+                                    <segue destination="7px-LZ-afd" kind="push" id="zJk-98-9Z9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -263,40 +263,40 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1647" y="206"/>
+            <point key="canvasLocation" x="1724" y="206"/>
         </scene>
         <!--Alarm List View Controller-->
-        <scene sceneID="xd2-5z-d97">
+        <scene sceneID="Qcu-Up-p8P">
             <objects>
-                <tableViewController id="fBh-h9-dP2" customClass="AlarmListViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="tXF-Pl-IJr">
+                <tableViewController id="7px-LZ-afd" customClass="AlarmListViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="5HY-5I-x9K">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="n2D-tT-GfB">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="pat-wx-6Gu">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <connections>
-                                    <segue destination="hzl-dE-CCs" kind="push" identifier="showDetail" id="Qs8-qP-Jnf"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="fBh-h9-dP2" id="KFD-Ms-8ym"/>
-                            <outlet property="delegate" destination="fBh-h9-dP2" id="UZG-bF-Ise"/>
+                            <outlet property="dataSource" destination="7px-LZ-afd" id="4LS-KV-MGN"/>
+                            <outlet property="delegate" destination="7px-LZ-afd" id="TyP-bb-6U4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="7lF-mY-ZgF"/>
+                    <navigationItem key="navigationItem" id="OcL-Dp-wfd"/>
+                    <connections>
+                        <outlet property="TableView" destination="5HY-5I-x9K" id="q8l-zJ-HrW"/>
+                    </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RDq-59-uM8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VDc-sA-pAu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1647" y="1003"/>
+            <point key="canvasLocation" x="1724" y="999"/>
         </scene>
         <!--Alarm Setting View Controller-->
         <scene sceneID="8eH-9k-xFJ">
@@ -344,7 +344,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="I8a-kO-bhE" kind="push" id="kr7-7Y-pzQ"/>
+                                    <segue destination="I8a-kO-bhE" kind="push" identifier="ChooseDay" id="kr7-7Y-pzQ"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pxP-Vb-mEQ"/>
@@ -401,8 +401,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <navigationItem key="navigationItem" id="sFH-rx-bjS">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="TSj-JO-JR1">
                             <connections>
-                                <action selector="savePressed:" destination="SlD-Lz-fDK" id="qrk-CG-S7p"/>
-                                <segue destination="2" kind="push" id="bye-F7-cua"/>
+                                <segue destination="2" kind="push" identifier="BackToMain" id="hgR-1Z-8La"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -615,21 +614,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="2172" y="-1102"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="OWV-1C-rse">
-            <objects>
-                <viewController id="hzl-dE-CCs" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="w0z-Oh-WYe">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="hUo-1T-zgO"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BNh-pS-0zA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2172" y="1003"/>
-        </scene>
         <!--Location Timer View Controller-->
         <scene sceneID="FYA-y1-1Hy">
             <objects>
@@ -664,8 +648,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ecl-k6-iDC" firstAttribute="top" secondItem="AmV-lK-0Gf" secondAttribute="top" constant="136" id="9bk-ga-dcs"/>
-                            <constraint firstItem="Ecl-k6-iDC" firstAttribute="leading" secondItem="n9P-Pg-575" secondAttribute="leading" type="default" id="ZHP-aa-9FD"/>
-                            <constraint firstItem="n9P-Pg-575" firstAttribute="leading" secondItem="AmV-lK-0Gf" secondAttribute="leading" constant="26" id="cUJ-QN-inc"/>
+                            <constraint firstItem="n9P-Pg-575" firstAttribute="leading" secondItem="AmV-lK-0Gf" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="UYe-NA-5r1"/>
+                            <constraint firstAttribute="trailing" secondItem="n9P-Pg-575" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Udo-bB-7rX"/>
+                            <constraint firstItem="Ecl-k6-iDC" firstAttribute="leading" secondItem="AmV-lK-0Gf" secondAttribute="leading" constant="26" id="bCB-vN-1IT"/>
                             <constraint firstItem="n9P-Pg-575" firstAttribute="top" secondItem="AmV-lK-0Gf" secondAttribute="top" constant="74" id="xV4-eF-Rnc"/>
                         </constraints>
                     </view>
@@ -750,12 +735,72 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="Backgrounds1.jpg" width="972" height="1200"/>
         <image name="caricon.png" width="250" height="122"/>
     </resources>
+    <classes>
+        <class className="AlarmListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AlarmListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="TableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="AlarmSettingViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AlarmSettingViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="RepeatDay" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="StopForLongTime" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="alarmTime" candidateClass="UIDatePicker"/>
+                <relationship kind="outlet" name="btnRepeat" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnSave" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="lblText" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="BusViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BusViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="refresh:"/>
+                <relationship kind="outlet" name="showAllBus" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="DaySettingViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DaySettingViewController.h"/>
+        </class>
+        <class className="FlipsideViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FlipsideViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="done:"/>
+            </relationships>
+        </class>
+        <class className="LocationTimerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationTimerViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="btn_pressed:"/>
+                <relationship kind="outlet" name="btn_get" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="txt_show" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="MainViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
+        </class>
+        <class className="MapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="OperationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OperationViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="info" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="location" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="time" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="bye-F7-cua"/>
+        <segue reference="hgR-1Z-8La"/>
     </inferredMetricsTieBreakers>
 </document>

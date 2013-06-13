@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		025A37511768D3B000FD1618 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 025A37501768D3B000FD1618 /* libsqlite3.0.dylib */; };
 		025A37541768D3E700FD1618 /* Alarm.m in Sources */ = {isa = PBXBuildFile; fileRef = 025A37531768D3E700FD1618 /* Alarm.m */; };
-		02F1B6351768C459008D609D /* AlarmDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F1B6341768C459008D609D /* AlarmDetailViewController.m */; };
+		02C07E5B17697761009CC489 /* AlarmListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C07E5A17697761009CC489 /* AlarmListViewController.m */; };
 		C35C867917448DED0041909D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35C867817448DED0041909D /* UIKit.framework */; };
 		C35C867B17448DED0041909D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35C867A17448DED0041909D /* Foundation.framework */; };
 		C35C867D17448DED0041909D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35C867C17448DED0041909D /* CoreGraphics.framework */; };
@@ -55,8 +55,8 @@
 		025A37501768D3B000FD1618 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		025A37521768D3E700FD1618 /* Alarm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alarm.h; sourceTree = "<group>"; };
 		025A37531768D3E700FD1618 /* Alarm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alarm.m; sourceTree = "<group>"; };
-		02F1B6331768C459008D609D /* AlarmDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmDetailViewController.h; sourceTree = "<group>"; };
-		02F1B6341768C459008D609D /* AlarmDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmDetailViewController.m; sourceTree = "<group>"; };
+		02C07E5917697761009CC489 /* AlarmListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlarmListViewController.h; path = ../AlarmListViewController.h; sourceTree = "<group>"; };
+		02C07E5A17697761009CC489 /* AlarmListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlarmListViewController.m; path = ../AlarmListViewController.m; sourceTree = "<group>"; };
 		C35C867517448DED0041909D /* LocationTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C35C867817448DED0041909D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C35C867A17448DED0041909D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -187,16 +187,16 @@
 		C35C867E17448DED0041909D /* LocationTracker */ = {
 			isa = PBXGroup;
 			children = (
-				02F1B6331768C459008D609D /* AlarmDetailViewController.h */,
-				02F1B6341768C459008D609D /* AlarmDetailViewController.m */,
+				D82E2FE71762A429004EE303 /* LocationTimerViewController.h */,
+				D82E2FE81762A429004EE303 /* LocationTimerViewController.m */,
+				02C07E5917697761009CC489 /* AlarmListViewController.h */,
+				02C07E5A17697761009CC489 /* AlarmListViewController.m */,
 				D88D0143176628E30048694C /* OperationViewController.h */,
 				D88D0144176628E30048694C /* OperationViewController.m */,
 				D8F783141764450D00DAD800 /* AlarmSettingViewController.h */,
 				D8F783151764450D00DAD800 /* AlarmSettingViewController.m */,
 				D82E30381762A6DD004EE303 /* MapViewController.h */,
 				D82E30391762A6DD004EE303 /* MapViewController.m */,
-				D82E2FE71762A429004EE303 /* LocationTimerViewController.h */,
-				D82E2FE81762A429004EE303 /* LocationTimerViewController.m */,
 				D82E2FE11762A3C1004EE303 /* Location.h */,
 				D82E2FE21762A3C1004EE303 /* Location.m */,
 				D82E2FD31762A04B004EE303 /* DurationTimeCalculator.h */,
@@ -329,8 +329,8 @@
 				D82E303A1762A6DD004EE303 /* MapViewController.m in Sources */,
 				D82E303D1762F7FF004EE303 /* DaySettingViewController.m in Sources */,
 				D8F783161764450D00DAD800 /* AlarmSettingViewController.m in Sources */,
-				02F1B6351768C459008D609D /* AlarmDetailViewController.m in Sources */,
 				025A37541768D3E700FD1618 /* Alarm.m in Sources */,
+				02C07E5B17697761009CC489 /* AlarmListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
