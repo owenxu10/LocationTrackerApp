@@ -182,18 +182,10 @@
                     
                 }
                 sqlite3_close(alarmDB);
-                
             }
-        
-        
-        
         }
     }
     
     sqlite3_close(alarmDB);
-
-        
-        
-        
-    }
+}
 @end
