@@ -750,61 +750,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="Backgrounds1.jpg" width="972" height="1200"/>
         <image name="caricon.png" width="250" height="122"/>
     </resources>
-    <classes>
-        <class className="AlarmSettingViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AlarmSettingViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="savePressed:"/>
-                <relationship kind="outlet" name="RepeatDay" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="StopForLongTime" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="alarmTime" candidateClass="UIDatePicker"/>
-                <relationship kind="outlet" name="btnRepeat" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btnSave" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="lblText" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="BusViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BusViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="refresh:"/>
-                <relationship kind="outlet" name="showAllBus" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="DaySettingViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DaySettingViewController.h"/>
-        </class>
-        <class className="FlipsideViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FlipsideViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="done:"/>
-            </relationships>
-        </class>
-        <class className="LocationTimerViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationTimerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="btn_pressed:"/>
-                <relationship kind="outlet" name="btn_get" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="txt_show" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="MainViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
-        </class>
-        <class className="MapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="OperationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/OperationViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="info" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="location" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="time" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
