@@ -14,7 +14,7 @@
 #import "DurationTimeCalculator.h"
 
 
-@interface OperationViewController : UIViewController <CLLocationManagerDelegate, NSURLConnectionDataDelegate>
+@interface OperationViewController : UIViewController <CLLocationManagerDelegate>
 
 @property (retain, nonatomic) CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet UILabel *info;
