@@ -142,9 +142,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fXV-Yf-nzq" firstAttribute="leading" secondItem="lby-ZY-2rr" secondAttribute="leading" constant="28" id="0GE-ks-70W"/>
+                            <constraint firstItem="fXV-Yf-nzq" firstAttribute="leading" secondItem="lby-ZY-2rr" secondAttribute="leading" constant="35" id="1Ij-4a-sAt"/>
                             <constraint firstItem="Yxr-iK-JqL" firstAttribute="trailing" secondItem="lby-ZY-2rr" secondAttribute="trailing" type="default" id="5Oh-eC-eO2"/>
-                            <constraint firstAttribute="trailing" secondItem="kf8-o9-RjO" secondAttribute="trailing" constant="29" id="AGs-2S-13h"/>
                             <constraint firstItem="P3X-Vi-w2k" firstAttribute="leading" secondItem="lby-ZY-2rr" secondAttribute="leading" constant="48" id="DjE-7B-2Rb"/>
                             <constraint firstItem="kf8-o9-RjO" firstAttribute="bottom" secondItem="fXV-Yf-nzq" secondAttribute="bottom" type="default" id="J7p-sT-FVJ"/>
                             <constraint firstItem="4pp-en-GA6" firstAttribute="trailing" secondItem="Z5H-uu-arx" secondAttribute="trailing" type="default" id="JXb-Go-4NR"/>
@@ -154,6 +153,7 @@
                             <constraint firstItem="Yxr-iK-JqL" firstAttribute="leading" secondItem="lby-ZY-2rr" secondAttribute="leading" type="default" id="iKy-Zy-axC"/>
                             <constraint firstItem="Yxr-iK-JqL" firstAttribute="bottom" secondItem="lby-ZY-2rr" secondAttribute="bottom" type="default" id="l52-3r-zQc"/>
                             <constraint firstItem="Z5H-uu-arx" firstAttribute="top" secondItem="lby-ZY-2rr" secondAttribute="top" constant="212" id="qiq-Vs-J4Y"/>
+                            <constraint firstItem="kf8-o9-RjO" firstAttribute="leading" secondItem="fXV-Yf-nzq" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="sJh-G1-V4Q"/>
                             <constraint firstAttribute="bottom" secondItem="P3X-Vi-w2k" secondAttribute="bottom" constant="111" id="te6-e3-Ja4"/>
                             <constraint firstItem="fXV-Yf-nzq" firstAttribute="top" secondItem="kf8-o9-RjO" secondAttribute="top" type="default" id="vcK-y4-jIR"/>
                             <constraint firstAttribute="bottom" secondItem="fXV-Yf-nzq" secondAttribute="bottom" constant="42" id="yMf-Ml-4PX"/>
