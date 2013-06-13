@@ -11,7 +11,10 @@
 #import "DurationTimeCalculator.h"
 
 @interface LocationTimerViewController ()
-
+{
+    sqlite3 *alarmDB;
+    NSString *dbPathString;
+}
 @end
 
 @implementation LocationTimerViewController
@@ -30,6 +33,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self getDataFromDB];
 	// Do any additional setup after loading the view.
 }
 
@@ -39,11 +44,65 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)getDataFromDB
+{
+    NSArray *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docPath = [path objectAtIndex:0];
+    
+    dbPathString = [docPath stringByAppendingPathComponent:@"alarm.db"];
+    
+    char *error;
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if (![fileManager fileExistsAtPath:dbPathString]) {
+        const char *dbPath = [dbPathString UTF8String];
+        
+        //creat db here
+        if (sqlite3_open(dbPath, &alarmDB)==SQLITE_OK) {
+            const char *sql_stmt = "CREATE TABLE IF NOT EXISTS ALARMS (ID INTEGER PRIMARY KEY AUTOINCREMENT, BUSNAME TEXT, MINUTES INTEGER, REPEAT TEXT,StopForLongTime TEXT)";
+            sqlite3_exec(alarmDB, sql_stmt, NULL, NULL, &error);
+            sqlite3_close(alarmDB);
+        }
+    }
+    sqlite3_stmt *statement;
+    
+    if (sqlite3_open([dbPathString UTF8String], &alarmDB)==SQLITE_OK) {
+        
+        NSString *querySql = [NSString stringWithFormat:@"SELECT * FROM ALARMS"];
+        const char* query_sql = [querySql UTF8String];
+        
+        if (sqlite3_prepare(alarmDB, query_sql, -1, &statement, NULL)==SQLITE_OK) {
+            while (sqlite3_step(statement)==SQLITE_ROW) {
+                NSString *busnamedb = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 1)];
+                NSString *minutes = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 2)];
+                NSString *repeat =[[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 3)];
+                NSString *stopforlongtime =[[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 4)];
+                
+                NSLog(@"%@%@%@%@",busnamedb,minutes,repeat,stopforlongtime);
+            }
+        }
+    }
+}
+
+
 - (IBAction)btn_pressed:(id)sender {
     [NSTimer scheduledTimerWithTimeInterval: 1 target: self selector: @selector(handleTimer:) userInfo: nil repeats: YES];
 }
 
 -(void) handleTimer:(NSTimer *) timer{
+   
+
+    
+    
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDate *now;
+    NSDateComponents *comps = [[NSDateComponents alloc] init];
+    NSInteger unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSWeekdayCalendarUnit |
+    NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
+    now=[NSDate date];
+    comps = [calendar components:unitFlags fromDate:now];
+    int week = [comps weekday];
+    NSLog(@"%d",week);
     /*
     Location *origin = [[Location alloc]init];
     [origin setLatitude:43.01318000000001];

@@ -26,6 +26,7 @@
     UIBarButtonItem *temporaryBarButtonItem=[[UIBarButtonItem alloc] init];
     temporaryBarButtonItem.title=@"Back";
     self.navigationItem.backBarButtonItem = temporaryBarButtonItem;
+    
 }
 
 - (void)didReceiveMemoryWarning
