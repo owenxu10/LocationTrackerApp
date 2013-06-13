@@ -43,7 +43,6 @@
 		D82E2FD61762A161004EE303 /* Backgrounds1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D82E2FD51762A161004EE303 /* Backgrounds1.jpg */; };
 		D82E2FD81762A17E004EE303 /* S4BClient_1024 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = D82E2FD71762A17E004EE303 /* S4BClient_1024 copy.png */; };
 		D82E2FE31762A3C1004EE303 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = D82E2FE21762A3C1004EE303 /* Location.m */; };
-		D82E2FE91762A429004EE303 /* LocationTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82E2FE81762A429004EE303 /* LocationTimerViewController.m */; };
 		D82E30371762A6AF004EE303 /* DurationTimeCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = D82E2FD41762A04B004EE303 /* DurationTimeCalculator.m */; };
 		D82E303A1762A6DD004EE303 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82E30391762A6DD004EE303 /* MapViewController.m */; };
 		D82E303D1762F7FF004EE303 /* DaySettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82E303C1762F7FF004EE303 /* DaySettingViewController.m */; };
@@ -102,8 +101,6 @@
 		D82E2FD71762A17E004EE303 /* S4BClient_1024 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "S4BClient_1024 copy.png"; path = "LocationTracker/S4BClient_1024 copy.png"; sourceTree = "<group>"; };
 		D82E2FE11762A3C1004EE303 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		D82E2FE21762A3C1004EE303 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
-		D82E2FE71762A429004EE303 /* LocationTimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationTimerViewController.h; sourceTree = "<group>"; };
-		D82E2FE81762A429004EE303 /* LocationTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationTimerViewController.m; sourceTree = "<group>"; };
 		D82E30381762A6DD004EE303 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		D82E30391762A6DD004EE303 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		D82E303B1762F7FF004EE303 /* DaySettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaySettingViewController.h; sourceTree = "<group>"; };
@@ -191,8 +188,6 @@
 		C35C867E17448DED0041909D /* LocationTracker */ = {
 			isa = PBXGroup;
 			children = (
-				D82E2FE71762A429004EE303 /* LocationTimerViewController.h */,
-				D82E2FE81762A429004EE303 /* LocationTimerViewController.m */,
 				02C07E5917697761009CC489 /* AlarmListViewController.h */,
 				02C07E5A17697761009CC489 /* AlarmListViewController.m */,
 				D88D0143176628E30048694C /* OperationViewController.h */,
@@ -333,7 +328,6 @@
 				C35C869817448DED0041909D /* FlipsideViewController.m in Sources */,
 				C3ACDA32175BEF40009B2A37 /* BusViewController.m in Sources */,
 				D82E2FE31762A3C1004EE303 /* Location.m in Sources */,
-				D82E2FE91762A429004EE303 /* LocationTimerViewController.m in Sources */,
 				D82E303A1762A6DD004EE303 /* MapViewController.m in Sources */,
 				D82E303D1762F7FF004EE303 /* DaySettingViewController.m in Sources */,
 				D8F783161764450D00DAD800 /* AlarmSettingViewController.m in Sources */,
