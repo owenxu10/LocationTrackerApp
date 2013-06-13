@@ -13,4 +13,7 @@
 @property(nonatomic, strong)NSString *busName;
 @property(assign)int minutes;
 @property(nonatomic, strong)NSString *Repeat;
+@property(nonatomic, strong)NSString *LongTime;
+
+
 @end

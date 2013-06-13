@@ -83,15 +83,7 @@
     RepeatDay.text = objects;
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    //Get a handle on the view controller about be presented
-    DaySettingViewController *controller = segue.destinationViewController;
-    
-    if ([controller isKindOfClass:[DaySettingViewController class]]) {
-        controller.delegate = self;
-    }
-}
+
 
 - (void)viewDidLoad
 {
@@ -125,11 +117,23 @@
             sqlite3_close(alarmDB);
         }
     }
+       
 }
 
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    //Get a handle on the view controller about be presented
+     if([[segue identifier] isEqualToString:@"ChooseDay"]){
+    DaySettingViewController *controller = segue.destinationViewController;
+    
+    if ([controller isKindOfClass:[DaySettingViewController class]]) {
+        controller.delegate = self;
+    }}
 
-- (IBAction)savePressed:(id)sender {
+    if([[segue identifier] isEqualToString:@"BackToMain"]){
+     
+
+    
     LongTime = StopForLongTime.isOn;
     int alarm = (int)floor(_alarmTime.countDownDuration);
      NSString *StringLongTime=nil;
@@ -158,6 +162,7 @@
                     Flag=YES;
             }
         }
+
         if (Flag ==YES) {
             
      
@@ -181,11 +186,13 @@
                     NSLog(@"Alarm added");
                     
                 }
-                sqlite3_close(alarmDB);
             }
         }
     }
     
     sqlite3_close(alarmDB);
+    }
+    
+    
 }
 @end

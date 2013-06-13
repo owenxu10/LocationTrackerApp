@@ -7,8 +7,14 @@
 //
 
 #import "AlarmListViewController.h"
+#import "sqlite3.h"
 
 @interface AlarmListViewController ()
+{
+    NSMutableArray *arrayOfAlarm;
+    sqlite3 *alarmDB;
+    NSString *dbPathString;
+}
 
 @end
 
@@ -26,7 +32,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
+    arrayOfAlarm = [[NSMutableArray alloc]init];
+    [self createOrOpenDB];
+    [self GetDataFromDB];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -44,27 +53,98 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return arrayOfAlarm.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier ];
     
-    // Configure the cell...
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    }
+    
+    Alarm *alarm = [arrayOfAlarm objectAtIndex:indexPath.row];
+    NSLog(@"%@",alarm.busName);
+    cell.textLabel.text = alarm.busName;
+    
     
     return cell;
+
 }
+
+- (void)createOrOpenDB
+{
+    NSArray *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docPath = [path objectAtIndex:0];
+    
+    dbPathString = [docPath stringByAppendingPathComponent:@"alarm.db"];
+    
+    char *error;
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if (![fileManager fileExistsAtPath:dbPathString]) {
+        const char *dbPath = [dbPathString UTF8String];
+        
+        //creat db here
+        if (sqlite3_open(dbPath, &alarmDB)==SQLITE_OK) {
+            const char *sql_stmt = "CREATE TABLE IF NOT EXISTS ALARMS (ID INTEGER PRIMARY KEY AUTOINCREMENT, BUSNAME TEXT, MINUTES INTEGER, REPEAT TEXT,StopForLongTime TEXT)";
+            sqlite3_exec(alarmDB, sql_stmt, NULL, NULL, &error);
+            sqlite3_close(alarmDB);
+        }
+    }
+}
+        
+            
+          
+
+-(void)GetDataFromDB {
+    
+    sqlite3_stmt *statement;
+    
+    if (sqlite3_open([dbPathString UTF8String], &alarmDB)==SQLITE_OK) {
+        [arrayOfAlarm removeAllObjects];
+        
+        NSString *querySql = [NSString stringWithFormat:@"SELECT * FROM ALARMS"];
+        const char* query_sql = [querySql UTF8String];
+        
+        if (sqlite3_prepare(alarmDB, query_sql, -1, &statement, NULL)==SQLITE_OK) {
+            while (sqlite3_step(statement)==SQLITE_ROW) {
+                NSString *busnamedb = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 1)];
+                NSString *minutes = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 2)];
+                NSString *repeat = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 3)];
+                NSString *StayForLongTime = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 4)];
+                
+                
+                
+                Alarm *alarm = [[Alarm alloc]init];
+                [alarm setBusName:busnamedb];
+                [alarm setMinutes:[minutes intValue]];
+                [alarm setRepeat:repeat];
+                [alarm setLongTime: StayForLongTime];
+                
+                NSLog(@"%@",alarm.busName);
+                NSLog(@"%d",alarm.minutes);
+                NSLog(@"%@",alarm.LongTime);
+                NSLog(@"%@",alarm.Repeat);
+                
+                [arrayOfAlarm addObject:alarm];
+                NSLog(@"%d",arrayOfAlarm.count);
+            }
+        }
+    }
+    NSLog(@"%d",arrayOfAlarm.count);
+    [[self TableView]reloadData];
+}
+
 
 /*
 // Override to support conditional editing of the table view.

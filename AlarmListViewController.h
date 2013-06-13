@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import "sqlite3.h"
+#import "Alarm.h"
+
 @interface AlarmListViewController : UITableViewController
+@property (strong, nonatomic) IBOutlet UITableView *TableView;
 
 @end
