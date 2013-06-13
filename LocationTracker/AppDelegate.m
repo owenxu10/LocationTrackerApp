@@ -51,12 +51,12 @@
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
     //点击提示框的打开
     application.applicationIconBadgeNumber = 0;
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"DefaultStyle"
-                                                        message:@"the default alert view style"
+   /* UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Alarm "
+                                                        message:@"Your alarm is on."
                                                        delegate:self
                                               cancelButtonTitle:@"Cancel"
                                               otherButtonTitles:@"OK", nil]; 
-    [alertView show];
+    [alertView show];*/
 
 }
 

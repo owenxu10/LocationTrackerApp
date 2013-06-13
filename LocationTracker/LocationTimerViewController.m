@@ -11,15 +11,33 @@
 #import "DurationTimeCalculator.h"
 
 @interface LocationTimerViewController ()
-{
+{   
+    NSMutableData *webData;
+    NSMutableArray *arrayOfSAlarm;
+    NSMutableArray *arrayOfTAlarm;
+    NSMutableArray *arrayOfLAlarm;
     sqlite3 *alarmDB;
     NSString *dbPathString;
+    NSURLConnection *connection;
+    NSMutableArray *arrayArduino;
+    NSMutableArray *arrayLongitude;
+    NSMutableArray *arrayLatitude;
+    NSNumber *lat;
+    NSNumber *lon;
+    int tnum;
+    int tnot;
+    int tend;
+    int lnot;
+    int lend;
+    int lnum;
+    int sec;
 }
 @end
 
 @implementation LocationTimerViewController
 @synthesize btn_get = _btn_get;
 @synthesize txt_show = _txt_show;
+@synthesize locationManager;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,7 +51,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    tnum = lnum = 2;
+    tnot = 1;
+    tend = 1;
+    lnot = 1;
+    lend = 1;
+    sec = 0;
+    arrayOfSAlarm = [[NSMutableArray alloc]init];
+    arrayOfLAlarm = [[NSMutableArray alloc]init];
+    arrayOfTAlarm = [[NSMutableArray alloc]init];
     
+    arrayArduino = [[NSMutableArray alloc]init];
+    arrayLongitude= [[NSMutableArray alloc]init];
+    arrayLatitude= [[NSMutableArray alloc]init];
     [self getDataFromDB];
 	// Do any additional setup after loading the view.
 }
@@ -43,6 +73,40 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+{
+    [webData setLength:0];
+}
+
+-(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+{
+    [webData appendData:data];
+}
+
+-(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+{
+    NSLog(@"fail with error");
+}
+
+-(void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    NSDictionary *allDataDictionary = [NSJSONSerialization JSONObjectWithData:webData options:0 error:nil];
+    // NSDictionary *feed = [allDataDictionary objectForKey:@"feed"];
+    //NSArray *arrayOfEntry = [feed objectForKey:@"entry"];
+    
+    for (NSDictionary *diction in allDataDictionary) {
+        NSDictionary *arduino = [diction objectForKey:@"DeviceID"];
+        NSDictionary *longitude = [diction objectForKey:@"Longitude"];
+        NSDictionary *latitude = [diction objectForKey:@"Latitude"];
+        [arrayArduino addObject:arduino];
+        [arrayLongitude addObject:longitude];
+        [arrayLatitude addObject:latitude];
+    }
+    
+    
+}
+
 
 - (void)getDataFromDB
 {
@@ -78,7 +142,69 @@
                 NSString *repeat =[[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 3)];
                 NSString *stopforlongtime =[[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 4)];
                 
-                NSLog(@"%@ %@ %@ %@",busnamedb,minutes,repeat,stopforlongtime);
+                NSLog(@"%@-%@-%@-%@",busnamedb,minutes,repeat,stopforlongtime);
+                
+                Alarm *Salarm = [[Alarm alloc]init];
+                Alarm *Talarm = [[Alarm alloc]init];
+                Alarm *Lalarm = [[Alarm alloc]init];
+                [Lalarm setBusName:@"null"];
+                [Lalarm setMinutes:0];
+                [Lalarm setRepeat:@"null"];
+                [Lalarm setLongTime: @"null"];
+                
+                [Talarm setBusName:@"null"];
+                [Talarm setMinutes:0];
+                [Talarm setRepeat:@"null"];
+                [Talarm setLongTime: @"null"];
+                
+                [Salarm setBusName:@"null"];
+                [Salarm setMinutes:0];
+                [Salarm setRepeat:@"null"];
+                [Salarm setLongTime: @"null"];
+                if([stopforlongtime isEqualToString:@"YES"])
+                {
+                    [Lalarm setBusName:busnamedb];
+                    [Lalarm setMinutes:[minutes intValue]];
+                    [Lalarm setRepeat:repeat];
+                    [Lalarm setLongTime: stopforlongtime];
+                    
+                    NSLog(@"Lalarm=%@",Lalarm.busName);
+                    NSLog(@"Lalarm=%d",Lalarm.minutes);
+                    NSLog(@"Lalarm=%@",Lalarm.LongTime);
+                    NSLog(@"Lalarm=%@",Lalarm.Repeat);
+
+                }
+
+                if(![repeat isEqualToString:@"(null)"])
+                {
+                    [Salarm setBusName:busnamedb];
+                    [Salarm setMinutes:[minutes intValue]];
+                    [Salarm setRepeat:repeat];
+                    [Salarm setLongTime: stopforlongtime];
+                    
+                  //  NSLog(@"Salarm=%@",Lalarm.busName);
+                 //   NSLog(@"Salarm=%d",Lalarm.minutes);
+                 //   NSLog(@"Salarm=%@",Lalarm.LongTime);
+                 //   NSLog(@"Salarm=%@",Lalarm.Repeat);
+
+                }
+                else{
+                    [Talarm setBusName:busnamedb];
+                    [Talarm setMinutes:[minutes intValue]];
+                    [Talarm setRepeat:repeat];
+                    [Talarm setLongTime: stopforlongtime];
+                    
+                  //  NSLog(@"Talarm=%@",Talarm.busName);
+                  //  NSLog(@"Talarm=%d",Talarm.minutes);
+                  //  NSLog(@"Talarm=%@",Talarm.LongTime);
+                  //  NSLog(@"Talarm=%@",Talarm.Repeat);
+                }
+            
+                    [arrayOfTAlarm addObject:Talarm];
+                    [arrayOfSAlarm addObject:Salarm];
+                //if(![Lalarm.busName isEqualToString:@"(null)"])
+                    [arrayOfLAlarm addObject:Lalarm];
+                
             }
         }
     }
@@ -86,9 +212,9 @@
 
 
 - (IBAction)btn_pressed:(id)sender {
-    [NSTimer scheduledTimerWithTimeInterval: 1 target: self selector: @selector(scheduledSpy:) userInfo: nil repeats: YES];
-    [NSTimer scheduledTimerWithTimeInterval: 1 target: self selector: @selector(longTimeSpy:) userInfo: nil repeats: YES];
-    [NSTimer scheduledTimerWithTimeInterval: 1 target: self selector: @selector(todaySpy:) userInfo: nil repeats: YES];
+   // [NSTimer scheduledTimerWithTimeInterval: 5 target: self selector: @selector(scheduledSpy:) userInfo: nil repeats: YES];
+    [NSTimer scheduledTimerWithTimeInterval: 5 target: self selector: @selector(longTimeSpy:) userInfo: nil repeats: YES];
+    //[NSTimer scheduledTimerWithTimeInterval: 5 target: self selector: @selector(todaySpy:) userInfo: nil repeats: YES];
 }
 
 -(void) scheduledSpy:(NSTimer *) timer{
@@ -146,15 +272,187 @@ localNotification.timeZone = [NSTimeZone defaultTimeZone];
     }
 }
 
--(void) longTimeSpy:(NSTimer *) timer{
-    
-}
+
+
+
+
 
 -(void) todaySpy:(NSTimer *) timer{
+    if(tend !=0 ){
+    Location *origin = [[Location alloc]init];
     
-}
+    Location *destination = [[Location alloc]init];
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    locationManager.distanceFilter = kCLDistanceFilterNone;
+    [locationManager startUpdatingLocation];
+    CLLocation *currentlocation = [locationManager location];
+    // Configure the new event with information from the location
+    CLLocationCoordinate2D coordinate = [currentlocation coordinate];
     
+    [destination setLongitude: coordinate.longitude];
+    [destination setLatitude:coordinate.latitude];
+
     
+    NSURL *url = [NSURL URLWithString:@"http://asiangroup.mireene.com/locationTracker/index.php/get_newest_loc"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    connection = [NSURLConnection connectionWithRequest:request delegate:self];
+    
+    if(connection)
+    {
+        webData = [[NSMutableData alloc]init];
+    }
     
 
+    NSLog(@"---------%d-------------",arrayArduino.count);
+    for (int i = 0; i <  arrayOfTAlarm.count; i++)
+    {
+        NSLog(@"%i",tnum);
+        if(tnum==0){
+        NSString *bus=[[arrayOfTAlarm objectAtIndex:i] busName];
+        int time = [[arrayOfLAlarm objectAtIndex:i] minutes];
+        if(![bus isEqualToString:@"null"])
+        {
+           NSLog(@"%@",bus);
+           NSLog(@"%d",time);
+           NSLog(@"the idx is:%i",[arrayArduino indexOfObject:bus]);
+           
+           int index = [arrayArduino indexOfObject: bus];
+           NSLog(@"%d",index);
+           NSNumber *numberLatitude  = [arrayLatitude objectAtIndex:index];
+           NSNumber *numberLongitude = [arrayLongitude objectAtIndex:index];
+           
+           [origin setLatitude:[numberLatitude floatValue]];
+           [origin setLongitude:[numberLongitude floatValue]];
+            
+            DurationTimeCalculator *calculator = [[DurationTimeCalculator alloc] init];
+            int duration=[[calculator getDurationfrom:origin to:destination] intValue];
+            
+                     
+           if(duration == time )
+           {
+               if(tnot!=0){
+                   UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Alarm on "
+                                                                       message:[NSString stringWithFormat:@"%@ will come in %d mins",bus,time/60]
+                                                                      delegate:self
+                                                             cancelButtonTitle:@"Cancel"
+                                                             otherButtonTitles:@"OK", nil];
+                   [alertView show];
+                   tend=0;
+               //UILocalNotification* localNotification = [[UILocalNotification alloc] init];
+               //localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:60];
+               //localNotification.alertBody = [NSString stringWithFormat:@"%@ is coming in %d mins",bus,time];
+               //localNotification.timeZone = [NSTimeZone defaultTimeZone];
+               //[[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+                   if(tnot !=0) tnot --;
+               }
+           }
+        }
+    
+    }
+            
+}
+        if(tnum !=0)
+            tnum --;
+}
+    [arrayArduino removeAllObjects];
+    [arrayLongitude removeAllObjects];
+    [arrayLatitude removeAllObjects];
+}
+
+
+-(void) longTimeSpy:(NSTimer *) timer{
+    
+    if(lend!=0 ){
+        
+        NSURL *url = [NSURL URLWithString:@"http://asiangroup.mireene.com/locationTracker/index.php/get_newest_loc"];
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        
+        connection = [NSURLConnection connectionWithRequest:request delegate:self];
+        
+        if(connection)
+        {
+            webData = [[NSMutableData alloc]init];
+        }
+        
+        
+        NSLog(@"---------%d-------------",arrayArduino.count);
+        for (int i = 0; i <  arrayOfTAlarm.count; i++)
+        {
+            NSLog(@"%d",lnum);
+           
+            if(lnum<=0){
+                NSString *bus=[[arrayOfTAlarm objectAtIndex:i] busName];
+                if(![bus isEqualToString:@"null"])
+                {
+                    
+                    NSLog(@"%@",bus);
+                    NSLog(@"the idx is:%i",[arrayArduino indexOfObject:bus]);
+                    
+                    int index = [arrayArduino indexOfObject: bus];
+                    NSLog(@"%d",index);
+                    
+                    NSNumber *numberLatitude  = [arrayLatitude objectAtIndex:index];
+                    NSNumber *numberLongitude = [arrayLongitude objectAtIndex:index];
+                    
+                    
+                    if(lnum==0){
+                        lon=numberLongitude;
+                        lat=numberLatitude;
+                        lnum=lnum-1;
+                    }
+                    
+                    NSLog(@"lon=%@",lon);
+                    NSLog(@"lat=%@",lat);
+                    
+                    NSLog(@"latit=%@",numberLongitude);
+                    NSLog(@"long=%@",numberLatitude);
+                    
+                    
+                        NSLog(@"%d", numberLatitude.intValue-lat.intValue);
+                    
+                   if((lon.intValue==numberLongitude.intValue)&&(lat.intValue == numberLatitude.intValue ))
+                    {
+                        lon=numberLongitude;
+                        lat=numberLatitude;
+                    }
+                    else sec=0;
+                    
+                    NSLog(@"sec=%d",sec);
+                    if(sec ==30){
+                        if(lnot!=0){
+                            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Alarm On"
+                                                                                message:[NSString stringWithFormat:@"%@ is stopping for long time",bus]
+                                                                               delegate:self
+                                                                      cancelButtonTitle:@"Cancel"
+                                                                      otherButtonTitles:@"OK", nil];
+                            [alertView show];
+                            lend=0;
+                            //UILocalNotification* localNotification = [[UILocalNotification alloc] init];
+                            //localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:60];
+                            //localNotification.alertBody = ;
+                            //localNotification.timeZone = [NSTimeZone defaultTimeZone];
+                            //[[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+                            if(lnot !=0) lnot --;
+                        }
+                    }
+                    
+                }
+                
+            }
+            
+        }
+    }
+    sec=sec+5;
+    if(lnum !=0)
+        lnum --;
+     NSLog(@"lnum=%d",lnum);
+    [arrayArduino removeAllObjects];
+    [arrayLongitude removeAllObjects];
+    [arrayLatitude removeAllObjects];
+    
+    
+}
 @end

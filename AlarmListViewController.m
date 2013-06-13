@@ -131,17 +131,16 @@
                 [alarm setRepeat:repeat];
                 [alarm setLongTime: StayForLongTime];
                 
-                NSLog(@"%@",alarm.busName);
-                NSLog(@"%d",alarm.minutes);
-                NSLog(@"%@",alarm.LongTime);
-                NSLog(@"%@",alarm.Repeat);
+                //NSLog(@"%@",alarm.busName);
+                //NSLog(@"%d",alarm.minutes);
+                //NSLog(@"%@",alarm.LongTime);
+                //NSLog(@"%@",alarm.Repeat);
                 
                 [arrayOfAlarm addObject:alarm];
-                NSLog(@"%d",arrayOfAlarm.count);
+                //NSLog(@"%d",arrayOfAlarm.count);
             }
         }
     }
-    NSLog(@"%d",arrayOfAlarm.count);
     [[self TableView]reloadData];
 }
 
